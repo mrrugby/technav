@@ -192,7 +192,7 @@
 
 <script setup>
   useHead({
-    title: "Technav Landing Page",
+    title: "Home - TechNav ",
     meta: [
       {
         name: "description",
