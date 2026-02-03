@@ -4,8 +4,7 @@
 
     <header class="topbar">
       <a class="brand" href="#top">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-name">TaifaDevs</span>
+        <img src="../public/logo.png" alt="taifadevs logo">
       </a>
 
       <nav class="nav">

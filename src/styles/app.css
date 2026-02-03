@@ -29,8 +29,18 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 800;
-  letter-spacing: -0.2px;
+  cursor: pointer;
+}
+
+.brand img{
+    height: 35px;
+    width: auto;
+    display: block;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.brand:hover img {
+  opacity: 0.85;
+  transform: translateY(-0.5px);
 }
 
 .brand-mark{
@@ -264,6 +274,9 @@ h1{
 
 /* mobile */
 @media (max-width: 520px){
+    .brand img{
+        height:30px;
+    }
   .input-row{
     flex-direction: column;
   }
