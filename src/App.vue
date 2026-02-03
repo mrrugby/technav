@@ -107,7 +107,7 @@ const projects = [
   {
     name: "Portfolio",
     url: "https://portfolio.technav.store",
-    note: "Conversational CV + quick actions",
+    note: "Conversational CV",
   },
   {
     name: "CouncilCare",
