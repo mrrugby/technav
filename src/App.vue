@@ -118,6 +118,11 @@ const projects = [
     url: "https://deni-tracker.vercel.app/",
     note: "Debtly is a simple, mobile-friendly web app built with Vue that helps small business owners track daily credit transactions without relying on physical paper records.The app stores data directly in the phone’s local memory, making it lightweight, fast, and usable even for businesses that don’t want complex setups or cloud accounts.",
   },
+  {
+    name: "MiniPay",
+    url: "https://github.com/mrrugby/minipay",
+    note: "Simple M-pesa, Django payment gateway.",
+  },
 ];
 
 function focusEmail() {
