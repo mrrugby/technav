@@ -110,8 +110,13 @@ const projects = [
   },
   {
     name: "CouncilCare",
-    url: "********",
-    note: "Simple Ticketing System",
+    url: "https://councilcare.onrender.com/",
+    note: "CouncilCare is a Django-based web application designed to streamline IT repair request management for different departments. It allows employees to submit repair requests, technicians to update task statuses, and administrators to oversee the entire process.",
+  },
+  {
+    name: "Debtly",
+    url: "https://deni-tracker.vercel.app/",
+    note: "Debtly is a simple, mobile-friendly web app built with Vue that helps small business owners track daily credit transactions without relying on physical paper records.The app stores data directly in the phone’s local memory, making it lightweight, fast, and usable even for businesses that don’t want complex setups or cloud accounts.",
   },
 ];
 
