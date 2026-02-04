@@ -29,6 +29,10 @@
   --input: rgba(255,255,255,0.06);
 }
 
+:root{
+  --topbar-h: 72px;
+}
+
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
