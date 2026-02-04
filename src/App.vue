@@ -4,7 +4,12 @@
 
     <header class="topbar">
       <a class="brand" href="#top" @click.prevent="scrollTo('top')">
-        <img :src="logoSrc" alt="taifadevs logo" />
+        <img 
+        :src="logoSrc" 
+        alt="taifadevs logo" 
+        decoding="async"
+        fetchpriority="high"
+        />
       </a>
 
     <nav class="nav">
