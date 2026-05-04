@@ -200,7 +200,25 @@
 
         <!-- WORK -->
         <section id="projects" class="projects" aria-label="Work">
-          <h2>Projects</h2>
+        <div class="projects-header">
+          <h2>Work</h2>
+
+          <div class="tabs">
+            <button
+              :class="{ active: activeTab === 'projects' }"
+              @click="activeTab = 'projects'"
+            >
+              Projects
+            </button>
+
+            <button
+              :class="{ active: activeTab === 'ongoing' }"
+              @click="activeTab = 'ongoing'"
+            >
+              Ongoing
+            </button>
+          </div>
+        </div>
 
           <div class="project-list">
             <a
@@ -208,7 +226,7 @@
               :href="p.url"
               target="_blank"
               rel="noopener"
-              v-for="p in projects"
+              v-for="p in displayedProjects"
               :key="p.url"
             >
               <div class="project-title">{{ p.name }}</div>
@@ -216,9 +234,13 @@
             </a>
           </div>
 
-          <p class="tiny-note">
-            Debtly was built to help small businesses track credit without complicated setups. That’s the TaifaDevs spirit.
-          </p>
+        <p class="tiny-note" v-if="activeTab === 'projects'">
+          Debtly was built to help small businesses track credit without complicated setups. That’s the TaifaDevs spirit.
+        </p>
+
+        <p class="tiny-note" v-else>
+          I am currently working on these projects, feel free to follow along, click on the projects to view live builds.
+        </p>
         </section>
 
         <!-- CONTACT -->
@@ -299,6 +321,7 @@ const contactName = ref("");
 const contactEmail = ref("");
 const contactMessage = ref("");
 const contactStatus = ref("idle")
+const activeTab = ref("projects");
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xaqbrvqk";
 const WHATSAPP_NUMBER = "254704210555";
@@ -310,6 +333,25 @@ const whatsAppLink = computed(() => {
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 });
+
+const ongoingProjects = [
+  {
+    name: "AurivaLtd",
+    url:"https://aurivabookkeeping.com/",
+    note:"setting up email autoreply using resend",
+  },
+  {
+    name: "ingo Tenant Tracker",
+    url:"https://ingo-git-dev-snjshakas-projects.vercel.app/",
+    note:"wiring up mpesa to receive payment data"
+  }
+];
+
+const displayedProjects = computed(() =>{
+  return activeTab.value === "projects"
+  ? projects
+  : ongoingProjects
+})
 
 async function submitContact() {
   contactStatus.value = "sending";

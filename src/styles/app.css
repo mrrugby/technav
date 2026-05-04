@@ -1,12 +1,12 @@
 /* App.vue */
 
-.page{
+.page {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
 
-.bg-texture{
+.bg-texture {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><filter id="noise" x="0" y="0"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%25" height="100%25" filter="url(%23noise)"/></svg>');
   background-size: cover;
   opacity: 0.05;
@@ -15,9 +15,11 @@
   pointer-events: none;
 }
 
-.topbar{
+.topbar {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,29 +29,31 @@
   background: rgb(0 0 0 / 12%);
 }
 
-section[id]{
+section[id] {
   scroll-margin-top: var(--topbar-h);
 }
 
-.brand{
+.brand {
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
 }
 
-.brand img{
-    height: 35px;
-    width: auto;
-    display: block;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+.brand img {
+  height: 35px;
+  width: auto;
+  display: block;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 .brand:hover img {
   opacity: 0.85;
   transform: translateY(-0.5px);
 }
 
-.brand-mark{
+.brand-mark {
   width: 12px;
   height: 12px;
   border-radius: 999px;
@@ -57,32 +61,32 @@ section[id]{
   box-shadow: 0 0 0 6px rgb(0 247 255 / 10%);
 }
 
-.nav{
+.nav {
   display: flex;
   align-items: center;
   gap: 14px;
   margin-left: auto;
 }
 
-.nav a{
+.nav a {
   color: var(--muted);
   font-weight: 600;
 }
 
-.nav a:hover{
+.nav a:hover {
   color: var(--text);
   text-decoration: underline;
   text-underline-offset: 6px;
 }
 
-.nav .nav-link{
+.nav .nav-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   line-height: 1;
 }
 
-.nav .nav-ico{
+.nav .nav-ico {
   width: 16px;
   height: 16px;
   flex: 0 0 16px;
@@ -90,7 +94,7 @@ section[id]{
   fill: currentColor;
 }
 
-.icon-btn{
+.icon-btn {
   width: 40px;
   height: 40px;
   border-radius: 999px;
@@ -102,11 +106,11 @@ section[id]{
   margin-left: 6px;
 }
 
-.icon-btn:hover{
+.icon-btn:hover {
   border-color: rgb(0 247 255 / 35%);
 }
 
-.icon-btn .dot{
+.icon-btn .dot {
   width: 10px;
   height: 10px;
   border-radius: 999px;
@@ -114,7 +118,7 @@ section[id]{
 }
 
 /* main layout */
-.main{
+.main {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -124,37 +128,39 @@ section[id]{
   z-index: 2;
 }
 
-.container{
+.container {
   width: min(560px, calc(100% - 44px));
   margin: 0 auto;
   text-align: center;
 }
 
 /* copy */
-.hero-copy{ margin-bottom: 26px; }
+.hero-copy {
+  margin-bottom: 26px;
+}
 
-.eyebrow{
+.eyebrow {
   margin: 0 0 12px;
   font-size: 0.88rem;
   color: var(--muted);
   letter-spacing: 0.02em;
 }
 
-h1{
+h1 {
   font-size: clamp(32px, 4vw, 44px);
   line-height: 1.15;
   letter-spacing: -0.8px;
   margin: 0 0 14px;
 }
 
-.lead{
+.lead {
   margin: 0 0 18px;
   color: var(--muted);
   line-height: 1.75;
   font-size: 1.02rem;
 }
 
-.cta-row{
+.cta-row {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,22 +169,22 @@ h1{
   margin-bottom: 18px;
 }
 
-.secondary-cta{
+.secondary-cta {
   color: var(--muted);
   font-weight: 700;
 }
-.secondary-cta:hover{
+.secondary-cta:hover {
   color: var(--text);
   text-decoration: underline;
   text-underline-offset: 6px;
 }
 
 /* form */
-.form{
+.form {
   margin-top: 10px;
 }
 
-.form label{
+.form label {
   display: block;
   font-size: 0.9rem;
   font-weight: 600;
@@ -187,14 +193,14 @@ h1{
   text-align: left;
 }
 
-.input-row{
+.input-row {
   display: flex;
   gap: 10px;
   justify-content: center;
   align-items: stretch;
 }
 
-.form input{
+.form input {
   flex: 1;
   padding: 12px 14px;
   border-radius: var(--radius-lg);
@@ -205,12 +211,12 @@ h1{
   font-size: 1rem;
 }
 
-.form input:focus{
+.form input:focus {
   border-color: rgb(0 247 255 / 55%);
   box-shadow: var(--ring);
 }
 
-.submit{
+.submit {
   border: none;
   border-radius: var(--radius-lg);
   font-weight: 800;
@@ -218,25 +224,31 @@ h1{
   padding: 12px 16px;
   white-space: nowrap;
   color: #071014;
-  background: linear-gradient(135deg, rgb(0 247 255 / 95%), rgb(255 0 135 / 80%));
+  background: linear-gradient(
+    135deg,
+    rgb(0 247 255 / 95%),
+    rgb(255 0 135 / 80%)
+  );
   box-shadow: 0 10px 24px rgb(0 0 0 / 12%);
 }
 
-.submit:hover{ transform: translateY(-1px); }
+.submit:hover {
+  transform: translateY(-1px);
+}
 
-.submit--soft{
+.submit--soft {
   background: var(--subtle);
   color: var(--text);
   border: 1px solid var(--border);
   box-shadow: none;
 }
 
-.submit--soft:hover{
+.submit--soft:hover {
   border-color: rgb(0 247 255 / 35%);
 }
 
 /* contact textarea matches inputs */
-.form textarea{
+.form textarea {
   width: 100%;
   padding: 12px 14px;
   border-radius: var(--radius-lg);
@@ -251,19 +263,19 @@ h1{
   margin-top: 6px;
 }
 
-.form textarea:focus{
+.form textarea:focus {
   border-color: rgb(0 247 255 / 55%);
   box-shadow: var(--ring);
 }
 
-.contact-actions{
+.contact-actions {
   display: flex;
   gap: 10px;
   margin-top: 12px;
   align-items: center;
 }
 
-.wa-btn{
+.wa-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -276,96 +288,134 @@ h1{
   white-space: nowrap;
 }
 
-.wa-btn:hover{
+.wa-btn:hover {
   border-color: rgb(0 247 255 / 35%);
 }
 
-.form-status{
+.form-status {
   margin-top: 12px;
   font-size: 0.9rem;
   color: var(--muted);
 }
 
-.form-status.success{
+.form-status.success {
   color: rgb(0 247 255 / 85%);
 }
 
-.form-status.error{
+.form-status.error {
   color: rgb(255 0 135 / 85%);
 }
 
-
-
 /* footer */
-.footer{
+.footer {
   margin-top: 18px;
   font-size: 0.92rem;
   color: var(--muted);
 }
-.footer a{
+.footer a {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-.footer a:hover{ color: rgb(0 247 255 / 85%); }
+.footer a:hover {
+  color: rgb(0 247 255 / 85%);
+}
 
 /* projects */
-.projects{
+.projects {
   margin-top: 44px;
   text-align: left;
   border-top: 1px solid var(--border);
   padding-top: 22px;
 }
 
-.projects h2{
+.projects h2 {
   margin: 0 0 14px;
   font-size: 1rem;
   letter-spacing: -0.2px;
 }
+.projects-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.projects-header h2 {
+  margin: 0;
+}
 
-.project-list{
+.project-list {
   display: grid;
   gap: 10px;
 }
 
-.project{
+.project {
   display: block;
   padding: 14px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   background: var(--subtle);
 }
+.tabs {
+  display: flex;
+  gap: 14px;
+}
 
-.project:hover{
+.tabs button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  position: relative;
+}
+.tabs button:hover {
+  color: var(--text);
+}
+.tabs button.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: rgb(0 247 255 / 70%);
+  border-radius: 2px;
+}
+
+.project:hover {
   border-color: rgb(0 247 255 / 35%);
 }
 
-.project-title{
+.project-title {
   font-weight: 800;
   letter-spacing: -0.2px;
 }
 
-.project-meta{
+.project-meta {
   margin-top: 4px;
   font-size: 0.92rem;
   color: var(--muted);
 }
 
-.tiny-note{
+.tiny-note {
   margin-top: 18px;
   font-size: 0.85rem;
   color: var(--muted);
 }
 
 /* mobile */
-@media (max-width: 520px){
-  .contact-actions{
+@media (max-width: 520px) {
+  .contact-actions {
     flex-direction: column;
     align-items: stretch;
   }
-  .wa-btn{
+  .wa-btn {
     width: 100%;
   }
-  .nav{
+  .nav {
     position: fixed;
     right: 14px;
     bottom: 14px;
@@ -375,7 +425,7 @@ h1{
     z-index: 50;
   }
 
-  .nav .nav-link{
+  .nav .nav-link {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -387,24 +437,24 @@ h1{
     backdrop-filter: blur(8px);
   }
 
-  .nav .nav-ico{
+  .nav .nav-ico {
     width: 18px;
     height: 18px;
     fill: currentColor;
     opacity: 0.9;
   }
 
-  .nav .nav-link span{
-  font-size: 0.9rem;
+  .nav .nav-link span {
+    font-size: 0.9rem;
   }
-  
-    .brand img{
-        height:30px;
-    }
-  .input-row{
+
+  .brand img {
+    height: 30px;
+  }
+  .input-row {
     flex-direction: column;
   }
-  .submit{
+  .submit {
     width: 100%;
   }
 }
