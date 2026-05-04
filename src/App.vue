@@ -316,7 +316,7 @@ import { ref, computed, onMounted } from "vue";
 
 const email = ref("");
 const emailEl = ref(null);
-const theme = ref("light")
+const theme = ref("dark")
 const contactName = ref("");
 const contactEmail = ref("");
 const contactMessage = ref("");
