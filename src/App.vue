@@ -302,7 +302,7 @@
 
   <p class="footer">
     Prefer direct email?
-    <a href="mailto:snjishaka@gmail.com">snjishaka@gmail.com</a>
+    <a href="mailto:taifa.devs@proton.me">taifa.devs@proton.me</a>
   </p>
         </section>
 
