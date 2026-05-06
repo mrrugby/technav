@@ -53,7 +53,7 @@
 </template>
 <script setup>
 import { ref } from "vue";
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xaqbrvqk";
+const EMAILURL = "https://emailsendr.taifa-devs.workers.dev";
 const WHATSAPP_NUMBER = "254704210555";
 
 const contactName = ref("");
@@ -81,7 +81,7 @@ async function submitContact() {
             message: contactMessage.value.trim(),
         };
 
-        const res = await fetch(FORMSPREE_ENDPOINT, {
+        const res = await fetch(EMAILURL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
