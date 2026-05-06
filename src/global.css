@@ -64,6 +64,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
+a,
+button,
+img {
+  -webkit-tap-highlight-color: transparent;
+}
 .topbar {
   --nav-text: rgba(255, 255, 255, 0.75);
   --nav-text-hover: #ffffff;
