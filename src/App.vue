@@ -4,56 +4,44 @@
 
     <header class="topbar">
       <a class="brand" href="#top">
-        <img 
-        src="/logo-white.webp"
-        alt="taifadevs logo" 
-        width="120"
-        height="40"
-        decoding="async"
-        fetchpriority="high"
-        />
+        <img src="/logo-white.webp" alt="taifadevs logo" width="120" height="40" decoding="async"
+          fetchpriority="high" />
       </a>
 
-    <nav class="nav">
-    <a href="#services" class="nav-link">
-      <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M4 4h7v7H4V4zm9 0h7v7h-7V4zM4 13h7v7H4v-7zm9 0h7v7h-7v-7z"></path>
-      </svg>
-      <span>Services</span>
-    </a>
+      <nav class="nav">
+        <a href="#services" class="nav-link">
+          <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 4h7v7H4V4zm9 0h7v7h-7V4zM4 13h7v7H4v-7zm9 0h7v7h-7v-7z"></path>
+          </svg>
+          <span>Services</span>
+        </a>
 
-    <a href="#pricing" class="nav-link">
-      <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M20 10V4H14L4 14l6 6 10-10zm-5.5 1.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
-      </svg>
-      <span>Pricing</span>
-    </a>
+        <a href="#pricing" class="nav-link">
+          <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 10V4H14L4 14l6 6 10-10zm-5.5 1.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
+          </svg>
+          <span>Pricing</span>
+        </a>
 
-    <a href="#projects" class="nav-link">
-      <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M10 4h4l1 2h5v14H4V6h5l1-2zm2 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"></path>
-      </svg>
-      <span>Projects</span>
-    </a>
+        <a href="#projects" class="nav-link">
+          <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M10 4h4l1 2h5v14H4V6h5l1-2zm2 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"></path>
+          </svg>
+          <span>Projects</span>
+        </a>
 
-    <a href="#contact" class="nav-link">
-      <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M20 4H4v14h4v3l4-3h8V4zm-2 6H6V8h12v2zm0 4H6v-2h12v2z"></path>
-      </svg>
-      <span>Contacts</span>
-    </a>
-    </nav>
+        <a href="#contact" class="nav-link">
+          <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 4H4v14h4v3l4-3h8V4zm-2 6H6V8h12v2zm0 4H6v-2h12v2z"></path>
+          </svg>
+          <span>Contacts</span>
+        </a>
+      </nav>
 
-    <button
-      class="icon-btn"
-      type="button"
-      @click="toggleTheme"
-      aria-label="Toggle theme"
-      :title="themeLabel"
-    >
-      <span class="dot"></span>
-    </button>
-    
+      <button class="icon-btn" type="button" @click="toggleTheme" aria-label="Toggle theme" :title="themeLabel">
+        <span class="dot"></span>
+      </button>
+
 
     </header>
 
@@ -63,16 +51,16 @@
         <Hero @go-contact="goToContact" />
 
         <!-- SERVICES -->
-        <Services/>
+        <Services />
 
         <!-- PRICING -->
-        <Pricing/>
+        <Pricing />
 
         <!-- WORK -->
-        <Work/>
+        <Work />
 
         <!-- CONTACT -->
-        <Contact/>
+        <Contact />
 
       </div>
     </main>
@@ -105,13 +93,13 @@ function goToContact() {
   });
 }
 
-function setTheme(t){
+function setTheme(t) {
   theme.value = t;
   document.documentElement.setAttribute("data-theme", t);
   localStorage.setItem("taifa_theme", t);
 }
 
-function toggleTheme(){
+function toggleTheme() {
   setTheme(theme.value === "dark" ? "light" : "dark");
 }
 onMounted(() => {
@@ -140,4 +128,3 @@ function submit() {
 
 
 </script>
-
