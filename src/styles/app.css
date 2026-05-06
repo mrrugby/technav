@@ -7,12 +7,7 @@
 }
 
 .bg-texture {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><filter id="noise" x="0" y="0"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%25" height="100%25" filter="url(%23noise)"/></svg>');
-  background-size: cover;
-  opacity: 0.05;
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+  display: none;
 }
 
 .topbar {
@@ -26,7 +21,32 @@
   padding: 10px 6vw;
   z-index: 10;
   gap: 12px;
-  background: rgb(0 0 0 / 12%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.75)
+  );
+}
+
+.topbar .nav a {
+  color: var(--nav-text);
+}
+
+.topbar .nav a:hover {
+  color: var(--nav-text-hover);
+}
+
+.topbar .nav-ico {
+  fill: var(--nav-text);
+}
+
+.topbar .icon-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--nav-border);
+}
+
+.topbar .icon-btn:hover {
+  border-color: var(--nav-text-hover);
 }
 
 section[id] {
@@ -95,8 +115,8 @@ section[id] {
 }
 
 .icon-btn {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--subtle);
@@ -229,7 +249,7 @@ h1 {
     rgb(0 247 255 / 95%),
     rgb(255 0 135 / 80%)
   );
-  box-shadow: 0 10px 24px rgb(0 0 0 / 12%);
+  box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
 }
 
 .submit:hover {
@@ -433,7 +453,7 @@ h1 {
     border: 1px solid var(--border);
     background: rgb(0 0 0 / 22%);
     border-radius: 999px;
-    box-shadow: 0 10px 24px rgb(0 0 0 / 10%);
+    box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
     backdrop-filter: blur(8px);
   }
 

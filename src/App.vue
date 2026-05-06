@@ -3,38 +3,40 @@
     <div class="bg-texture" aria-hidden="true"></div>
 
     <header class="topbar">
-      <a class="brand" href="#top" @click.prevent="scrollTo('top')">
+      <a class="brand" href="#top">
         <img 
-        :src="logoSrc" 
+        src="/logo-white.webp"
         alt="taifadevs logo" 
+        width="120"
+        height="40"
         decoding="async"
         fetchpriority="high"
         />
       </a>
 
     <nav class="nav">
-    <a href="#services" @click.prevent="scrollTo('services')" class="nav-link">
+    <a href="#services" class="nav-link">
       <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M4 4h7v7H4V4zm9 0h7v7h-7V4zM4 13h7v7H4v-7zm9 0h7v7h-7v-7z"></path>
       </svg>
       <span>Services</span>
     </a>
 
-    <a href="#pricing" @click.prevent="scrollTo('pricing')" class="nav-link">
+    <a href="#pricing" class="nav-link">
       <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M20 10V4H14L4 14l6 6 10-10zm-5.5 1.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
       </svg>
       <span>Pricing</span>
     </a>
 
-    <a href="#projects" @click.prevent="scrollTo('projects')" class="nav-link">
+    <a href="#projects" class="nav-link">
       <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M10 4h4l1 2h5v14H4V6h5l1-2zm2 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"></path>
       </svg>
       <span>Projects</span>
     </a>
 
-    <a href="#contact" @click.prevent="scrollTo('contact')" class="nav-link">
+    <a href="#contact" class="nav-link">
       <svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M20 4H4v14h4v3l4-3h8V4zm-2 6H6V8h12v2zm0 4H6v-2h12v2z"></path>
       </svg>
@@ -73,7 +75,7 @@
               Get a quote
             </button>
 
-            <a class="secondary-cta" href="#pricing" @click.prevent="scrollTo('pricing')">
+            <a class="secondary-cta" href="#pricing">
               View packages →
             </a>
           </div>
@@ -286,7 +288,7 @@
         <span v-else>Sending…</span>
       </button>
 
-      <a class="wa-btn" :href="whatsAppLink" target="_blank" rel="noopener">
+      <a class="wa-btn" :href="getWhatsAppLink()" target="_blank" rel="noopener">
         WhatsApp
       </a>
     </div>
@@ -316,7 +318,7 @@ import { ref, computed, onMounted } from "vue";
 
 const email = ref("");
 const emailEl = ref(null);
-const theme = ref("dark")
+const theme = ref(localStorage.getItem("taifa_theme") || "dark");
 const contactName = ref("");
 const contactEmail = ref("");
 const contactMessage = ref("");
@@ -326,13 +328,15 @@ const activeTab = ref("projects");
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xaqbrvqk";
 const WHATSAPP_NUMBER = "254704210555";
 
-const whatsAppLink = computed(() => {
+
+
+function getWhatsAppLink() {
   const text =
     `Hi TaifaDevs, my name is ${contactName.value || ""}. ` +
     `I need help with: ${contactMessage.value || ""}`.trim();
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
-});
+}
 
 const ongoingProjects = [
   {
@@ -421,25 +425,18 @@ function setTheme(t){
 function toggleTheme(){
   setTheme(theme.value === "dark" ? "light" : "dark");
 }
-
-const logoSrc = computed(() => {
-  return theme.value === "dark"
-    ? "/logo-white.png"  
-    : "/logo.png";  
-});
-
 onMounted(() => {
-  setTheme(localStorage.getItem("taifa_theme") || "light");
+  setTheme(theme.value);
 });
-function scrollTo(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  el.scrollIntoView({ behavior: "smooth", block: "start" });
-}
+
+const themeLabel = computed(() => {
+  return theme.value === "dark"
+    ? "Switch to light"
+    : "Switch to dark";
+});
 
 function goToContact() {
   scrollTo("contact");
-  // small delay so scroll finishes before focusing
   window.setTimeout(() => emailEl.value?.focus(), 250);
 }
 
@@ -457,15 +454,5 @@ function submit() {
 }
 
 
-
-const themeLabel = computed(() => {
-  const current = document.documentElement.getAttribute("data-theme") || "light";
-  return current === "dark" ? "Switch to light" : "Switch to dark";
-});
-
-onMounted(() => {
-  setTheme(localStorage.getItem("taifa_theme") || "light");
-});
 </script>
 
-<style src="./styles/app.css"></style>
