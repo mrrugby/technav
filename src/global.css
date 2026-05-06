@@ -11,21 +11,26 @@
   --ring: 0 0 0 3px rgb(0 247 255 / 18%);
 
   /* Light defaults */
-  --bg: #f7f8f6;
-  --text: #111418;
-  --muted: rgba(17, 20, 24, 0.62);
-  --subtle: rgba(17, 20, 24, 0.06);
-  --border: rgba(17, 20, 24, 0.1);
-  --input: rgba(17, 20, 24, 0.04);
+  --bg: #f1f3f5;
+  --text: #121417;
+  --muted: rgba(18, 20, 23, 0.65);
+  --subtle: rgba(255, 255, 255, 0.55);
+  --border: rgba(0, 0, 0, 0.08);
+  --input: rgba(255, 255, 255, 0.65);
+  --ring: 0 0 0 3px rgb(0 247 255 / 14%);
 }
 
 [data-theme="dark"] {
   --bg: #0b0e14;
   --text: rgba(255, 255, 255, 0.92);
   --muted: rgba(255, 255, 255, 0.65);
+
   --subtle: rgba(255, 255, 255, 0.06);
   --border: rgba(255, 255, 255, 0.12);
+
   --input: rgba(255, 255, 255, 0.06);
+
+  --ring: 0 0 0 3px rgb(0 247 255 / 18%);
 }
 
 :root {
@@ -43,6 +48,9 @@ html {
   scroll-behaviour: smooth;
 }
 body {
+  background: linear-gradient(to bottom, #f1f3f5, #e9ecef);
+  font-weight: 500;
+  font-size: 17px;
   margin: 0;
   font-family: var(--font-family);
   background: var(--bg);

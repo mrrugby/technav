@@ -60,253 +60,19 @@
     <main class="main">
       <div class="container">
         <!-- HERO -->
-        <section class="hero-copy" aria-label="Hero">
-          <p class="eyebrow">TaifaDevs • Nairobi, Kenya</p>
-
-          <h1>Your trusted partner for modern IT solutions.</h1>
-
-          <p class="lead">
-            We make technology accessible to Business owners, starting with the smallest businesses. 
-            You’ll get a clean website, clear pricing, and support you can depend on.
-          </p>
-
-          <div class="cta-row">
-            <button class="submit" type="button" @click="goToContact">
-              Get a quote
-            </button>
-
-            <a class="secondary-cta" href="#pricing">
-              View packages →
-            </a>
-          </div>
-
-          <p class="tiny-note">
-            What you see is what you get. 
-            We believe honest work starts with an honest quote.
-          </p>
-        </section>
+        <Hero @go-contact="goToContact" />
 
         <!-- SERVICES -->
-        <section id="services" class="projects" aria-label="Services">
-          <h2>Services</h2>
-
-          <div class="project-list">
-            <div class="project" role="article" aria-label="Websites">
-              <div class="project-title">Websites</div>
-              <div class="project-meta">
-                Simple, clean, mobile-friendly sites that help customers trust you and find you quickly.
-              </div>
-            </div>
-
-            <div class="project" role="article" aria-label="Business tools">
-              <div class="project-title">Business Tools & Simple Systems</div>
-              <div class="project-meta">
-                We build tools like Debtly — systems that help you track credit, customers, records, and daily operations.
-              </div>
-            </div>
-
-            <div class="project" role="article" aria-label="Support">
-              <div class="project-title">Support & Improvements</div>
-              <div class="project-meta">
-                Fix slow or outdated websites, update content, improve usability, and keep your site working properly.
-              </div>
-            </div>
-          </div>
-        </section>
+        <Services/>
 
         <!-- PRICING -->
-        <section id="pricing" class="projects" aria-label="Pricing">
-          <h2>Pricing</h2>
-
-          <p class="lead" style="margin-top: 0;">
-            Clear packages. Clear deliverables. If you need something custom, we will inform you of the cost upfront.
-          </p>
-
-          <div class="project-list">
-            <!-- Starter -->
-            <div class="project" role="article" aria-label="Starter Website Package">
-              <div class="project-title">Starter Website — KES 25,000</div>
-              <div class="project-meta">
-                Best for: small businesses, shops, freelancers, side hustles.
-                <br /><br />
-                <strong>Includes:</strong>
-                <ul style="margin: 10px 0 0; padding-left: 18px;">
-                  <li>1–3 pages (Home, About, Contact)</li>
-                  <li>Mobile-friendly design</li>
-                  <li>WhatsApp chat button</li>
-                  <li>Contact form + Google Maps</li>
-                  <li>Basic SEO setup</li>
-                  <li>1 round of revisions</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Business -->
-            <div class="project" role="article" aria-label="Business Website Package">
-              <div class="project-title">Business Website — KES 40,000–70,000</div>
-              <div class="project-meta">
-                Best for: established SMEs that want a stronger online presence.
-                <br /><br />
-                 <strong>Includes</strong> everything in Starter, plus:
-                <ul style="margin: 10px 0 0; padding-left: 18px;">
-                  <li>Up to 6 pages</li>
-                  <li>Custom layout based on your brand</li>
-                  <li>Better SEO setup + image optimization</li>
-                  <li>Basic analytics setup</li>
-                  <li>2 rounds of revisions</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Systems -->
-            <div class="project" role="article" aria-label="Business Systems Package">
-              <div class="project-title">Business Systems — From KES 80,000</div>
-              <div class="project-meta">
-                Best for: businesses that want to track operations and reduce manual work.
-                <br /><br />
-                 <strong>Examples:</strong>
-                <ul style="margin: 10px 0 0; padding-left: 18px;">
-                  <li>Credit tracking / customer balances (Debtly-style)</li>
-                  <li>Simple CRM</li>
-                  <li>Sales & records dashboard</li>
-                </ul>
-
-                <div style="margin-top: 10px;">
-                   <strong>Includes:</strong> requirements call, secure login, training & handover, and post-launch support.
-                </div>
-              </div>
-            </div>
-
-            <!-- E-commerce -->
-            <div class="project" role="article" aria-label="E-commerce Package">
-              <div class="project-title">E-Commerce & Payments — From KES 120,000</div>
-              <div class="project-meta">
-                Best for: sellers who want orders + payments handled properly.
-                <br /><br />
-                <strong>Includes:</strong>
-                <ul style="margin: 10px 0 0; padding-left: 18px;">
-                  <li>Product/service catalogue</li>
-                  <li>M-Pesa integration (where applicable)</li>
-                  <li>Order management</li>
-                  <li>Admin dashboard</li>
-                  <li>Training on how to run it</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <p class="tiny-note">
-            Note: Hosting and domain costs are usually separate (paid directly to the provider). We’ll guide you on the best options.
-          </p>
-        </section>
+        <Pricing/>
 
         <!-- WORK -->
-        <section id="projects" class="projects" aria-label="Work">
-        <div class="projects-header">
-          <h2>Work</h2>
-
-          <div class="tabs">
-            <button
-              :class="{ active: activeTab === 'projects' }"
-              @click="activeTab = 'projects'"
-            >
-              Projects
-            </button>
-
-            <button
-              :class="{ active: activeTab === 'ongoing' }"
-              @click="activeTab = 'ongoing'"
-            >
-              Ongoing
-            </button>
-          </div>
-        </div>
-
-          <div class="project-list">
-            <a
-              class="project"
-              :href="p.url"
-              target="_blank"
-              rel="noopener"
-              v-for="p in displayedProjects"
-              :key="p.url"
-            >
-              <div class="project-title">{{ p.name }}</div>
-              <div class="project-meta">{{ p.note }}</div>
-            </a>
-          </div>
-
-        <p class="tiny-note" v-if="activeTab === 'projects'">
-          Debtly was built to help small businesses track credit without complicated setups. That’s the TaifaDevs spirit.
-        </p>
-
-        <p class="tiny-note" v-else>
-          I am currently working on these projects, feel free to follow along, click on the projects to view live builds.
-        </p>
-        </section>
+        <Work/>
 
         <!-- CONTACT -->
-        <section id="contact" class="projects" aria-label="Contact">
-  <h2>Contact</h2>
-
-  <p class="lead" style="margin-top: 0;">
-    Tell us what you need. We will respond with a straightforward plan and a cost.
-  </p>
-
-  <form class="form" @submit.prevent="submitContact" aria-label="Contact form">
-    <label for="name">Your Name</label>
-    <input
-      id="name"
-      v-model="contactName"
-      type="text"
-      placeholder="Your name"
-      autocomplete="name"
-      required
-    />
-
-    <label for="email" style="margin-top: 12px;">Your Email</label>
-    <input
-      id="email"
-      v-model="contactEmail"
-      type="email"
-      placeholder="hello@example.com"
-      autocomplete="email"
-      required
-    />
-
-    <label for="message" style="margin-top: 12px;">Message</label>
-    <textarea
-      id="message"
-      v-model="contactMessage"
-      placeholder="Briefly describe what you need (e.g. Starter Website, Business Website, System...)"
-      required
-    ></textarea>
-
-    <div class="contact-actions">
-      <button class="submit submit--soft" type="submit" :disabled="contactStatus === 'sending'">
-        <span v-if="contactStatus !== 'sending'">Send</span>
-        <span v-else>Sending…</span>
-      </button>
-
-      <a class="wa-btn" :href="getWhatsAppLink()" target="_blank" rel="noopener">
-        WhatsApp
-      </a>
-    </div>
-
-    <p v-if="contactStatus === 'success'" class="form-status success">
-      Message sent ✓ <br>We will reply shortly.
-    </p>
-
-    <p v-if="contactStatus === 'error'" class="form-status error">
-      Something went wrong. Please try again or WhatsApp us.
-    </p>
-  </form>
-
-  <p class="footer">
-    Prefer direct email?
-    <a href="mailto:taifa.devs@proton.me">taifa.devs@proton.me</a>
-  </p>
-        </section>
+        <Contact/>
 
       </div>
     </main>
@@ -314,107 +80,30 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
+import { defineAsyncComponent, ref, computed, onMounted } from "vue";
+
+const Work = defineAsyncComponent(() =>
+  import("./components/Work.vue")
+);
+
+const Contact = defineAsyncComponent(() =>
+  import("./components/Contact.vue")
+);
+
+import Hero from "./components/Hero.vue";
+import Services from "./components/Services.vue";
+import Pricing from "./components/Pricing.vue";
 
 const email = ref("");
 const emailEl = ref(null);
 const theme = ref(localStorage.getItem("taifa_theme") || "dark");
-const contactName = ref("");
-const contactEmail = ref("");
-const contactMessage = ref("");
-const contactStatus = ref("idle")
-const activeTab = ref("projects");
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xaqbrvqk";
-const WHATSAPP_NUMBER = "254704210555";
-
-
-
-function getWhatsAppLink() {
-  const text =
-    `Hi TaifaDevs, my name is ${contactName.value || ""}. ` +
-    `I need help with: ${contactMessage.value || ""}`.trim();
-
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+function goToContact() {
+  document.getElementById("contact")?.scrollIntoView({
+    behavior: "auto",
+    block: "start"
+  });
 }
-
-const ongoingProjects = [
-  {
-    name: "AurivaLtd",
-    url:"https://aurivabookkeeping.com/",
-    note:"setting up email autoreply using resend",
-  },
-  {
-    name: "ingo Tenant Tracker",
-    url:"https://ingo-git-dev-snjshakas-projects.vercel.app/",
-    note:"wiring up mpesa to receive payment data"
-  }
-];
-
-const displayedProjects = computed(() =>{
-  return activeTab.value === "projects"
-  ? projects
-  : ongoingProjects
-})
-
-async function submitContact() {
-  contactStatus.value = "sending";
-
-  try {
-    const payload = {
-      name: contactName.value.trim(),
-      email: contactEmail.value.trim(),
-      message: contactMessage.value.trim(),
-    };
-
-    const res = await fetch(FORMSPREE_ENDPOINT, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(payload),
-    });
-
-    if (!res.ok) throw new Error("Form submit failed");
-
-    contactStatus.value = "success";
-    contactName.value = "";
-    contactEmail.value = "";
-    contactMessage.value = "";
-
-    // auto-hide success after a bit
-    window.setTimeout(() => {
-      contactStatus.value = "idle";
-    }, 4500);
-  } catch (e) {
-    contactStatus.value = "error";
-  }
-}
-
-const projects = [
-  {
-    name: "Portfolio",
-    url: "https://portfolio.technav.store",
-    note: "Conversational CV",
-  },
-  {
-    name: "CouncilCare",
-    url: "https://councilcare.onrender.com/",
-    note: "Django-based system for IT repair request management across departments.",
-  },
-  {
-    name: "Debtly",
-    url: "https://deni-tracker.vercel.app/",
-    note: "Simple mobile-friendly credit tracker for small businesses (stores locally on the phone).",
-  },
-  {
-    name: "MiniPay",
-    url: "https://github.com/mrrugby/minipay",
-    note: "Simple M-Pesa + Django payment gateway project.",
-  },
-];
-
 
 function setTheme(t){
   theme.value = t;
@@ -435,10 +124,6 @@ const themeLabel = computed(() => {
     : "Switch to dark";
 });
 
-function goToContact() {
-  scrollTo("contact");
-  window.setTimeout(() => emailEl.value?.focus(), 250);
-}
 
 function submit() {
   const v = email.value.trim();
