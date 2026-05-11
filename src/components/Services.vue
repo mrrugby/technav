@@ -1,6 +1,6 @@
 <template>
   <section id="services" class="projects" aria-label="Services">
-    <h1 style="font-size: 25px;">Services</h1>
+    <h2 style="font-size: 25px;">Services</h2>
 
     <div class="project-list">
       <div class="project" role="article" aria-label="Websites">

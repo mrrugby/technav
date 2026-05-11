@@ -48,19 +48,33 @@
     <main class="main">
       <div class="container">
         <!-- HERO -->
-        <Hero @go-contact="goToContact" />
+        <section id="hero">
+          <Hero @go-contact="goToContact" />
+        </section>
 
         <!-- SERVICES -->
-        <Services />
+        <section id="services">
+          <Services />
+        </section>
 
         <!-- PRICING -->
-        <Pricing />
+        <section id="pricing">
+          <Pricing />
+        </section>
 
         <!-- WORK -->
-        <Work />
+        <section id="projects">
+          <Suspense>
+            <Work />
+          </Suspense>
+        </section>
 
         <!-- CONTACT -->
-        <Contact />
+        <section id="contact">
+          <Suspense>
+            <Contact />
+          </Suspense>
+        </section>
 
       </div>
     </main>
