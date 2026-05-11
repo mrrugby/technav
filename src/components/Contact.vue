@@ -22,7 +22,7 @@
             <div class="contact-actions">
                 <button class="submit submit--soft" type="submit" :disabled="contactStatus === 'sending'">
                     <span v-if="contactStatus !== 'sending'">Send</span>
-                    <span v-else>Sending…</span>
+                    <span v-else>Sending....</span>
                 </button>
 
                 <a class="wa-btn" :href="getWhatsAppLink()" target="_blank" rel="noopener"
