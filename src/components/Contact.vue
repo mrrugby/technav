@@ -1,6 +1,6 @@
 <template>
     <section id="contact" class="projects" aria-label="Contact">
-        <h2>Contact</h2>
+        <h1 style="font-size: 25px;">Contact</h1>
 
         <p class="lead" style="margin-top: 0;">
             Tell us what you need. We will respond with a straightforward plan and a cost.

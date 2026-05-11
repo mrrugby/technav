@@ -1,6 +1,6 @@
 <template>
     <section id="pricing" class="projects" aria-label="Pricing">
-          <h2>Pricing</h2>
+          <h1 style="font-size: 25px;">Pricing</h1>
 
           <p class="lead" style="margin-top: 0;">
            Finally, a creative service with crystal clear pricing.

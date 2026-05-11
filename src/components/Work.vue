@@ -1,7 +1,7 @@
 <template>
   <section id="projects" class="projects" aria-label="Work">
     <div class="projects-header">
-      <h2>Work</h2>
+      <h1 style="font-size: 25px;">Work</h1>
 
       <div class="tabs">
         <button :class="{ active: activeTab === 'ongoing' }" @click="activeTab = 'ongoing'">
