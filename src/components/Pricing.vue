@@ -92,7 +92,8 @@
 
       <details>
         <summary>Do I pay everything upfront?</summary>
-        <p>No. We usually split payments into milestones depending on the project size.</p>
+        <p>No. We split the total project cost into two payments: an initial deposit before work begins, and the
+          remaining balance once the project is completed.</p>
       </details>
 
       <details>
