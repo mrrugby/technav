@@ -3,42 +3,47 @@
     <h2 style="font-size: 25px;">Pricing</h2>
 
     <p class="lead" style="margin-top: 0;">
-      Simple, transparent pricing for websites and systems,with no hidden costs.
-      Built for businesses that want to go online fast and professionally.
+      Strategic Solutions for Every Stage of Business.
     </p>
 
     <div class="project-list">
       <!-- Starter -->
       <div class="project" role="article" aria-label="Starter Website Package">
-        <div class="project-title">Starter Website — KES 25,000</div>
+        <div class="project-title">The Digital Launchpad (Starter) — KES 25,000</div>
         <div class="project-meta">
-          Best for small businesses and personal brands getting online quickly.
+          Best for solo-preneurs and emerging brands establishing instant credibility.
           <br /><br />
           <strong>Includes:</strong>
           <ul style="margin: 10px 0 0; padding-left: 18px;">
-            <li>1–3 page modern website (Home, About, Contact)</li>
-            <li>Mobile-friendly design</li>
-            <li>WhatsApp chat button</li>
-            <li>Contact form</li>
-            <li>SEO setup</li>
+            <li>Strategic 3-Page Architecture: (Home, About, Services/Contact) designed for clarity</li>
+            <li>Mobile-First, Responsive Design: Optimized for 2026 mobile search dominance
+            </li>
+            <li>Direct-to-WhatsApp Conversion: Reducing friction between visitors and sales</li>
+            <li>Essential Search Visibility: Basic on-page SEO to ensure Google finds you</li>
             <li>1 round of revisions</li>
+            <!--add tiny note for timeline to deliver project
+            Fast-Track Delivery: Live in 7 days
+            -->
           </ul>
         </div>
       </div>
 
       <!-- Business -->
       <div class="project highlight" role="article" aria-label="Business Website Package">
-        <div class="project-title">Business Website — KES 40,000–70,000 <div class="badge">Most Popular</div>
+        <div class="project-title"> Professional Brand Growth (Business) — KES 40,000 – 70,000 <div class="badge">Most
+            Popular</div>
         </div>
         <div class="project-meta">
-          For established businesses that want a stronger online presence.
+          For established businesses ready to dominate their niche and grow their authority.
           <br /><br />
-          <strong>Includes</strong> everything in Starter, plus:
+          <strong>Includes</strong> everything in Launchpad, plus:
           <ul style="margin: 10px 0 0; padding-left: 18px;">
-            <li>Up to 6 pages</li>
-            <li>Custom layout based on your brand</li>
-            <li>Better SEO setup + image optimization</li>
-            <li>Basic analytics setup</li>
+            <li>Expanded Authority (Up to 8 Pages): Tailored architecture to satisfy complex user intent</li>
+            <li>Custom UI/UX Interaction: Unique layouts that reflect your brand’s "E-E-A-T" (Experience, Expertise,
+              Authoritativeness, and Trustworthiness)</li>
+            <li>Advanced Technical SEO: Image optimization and schema markup to rank in AI Overviews</li>
+            <li>Data-Driven Insights: Integrated analytics to track qualified leads and ROI
+            </li>
             <li>2 rounds of revisions</li>
           </ul>
         </div>
@@ -49,36 +54,36 @@
 
       <!-- Systems -->
       <div class="project" role="article" aria-label="Business Systems Package">
-        <div class="project-title">Business Systems — From KES 80,000</div>
+        <div class="project-title"> Custom Business Infrastructure (Systems) — From KES 80,000</div>
         <div class="project-meta">
-          Custom-built systems that help you manage and automate business operations.
+          Proprietary systems designed to automate operations and save hundreds of manual hours
           <br /><br />
           <strong>Examples:</strong>
           <ul style="margin: 10px 0 0; padding-left: 18px;">
-            <li>Credit tracking / customer balances (Debtly-style)</li>
-            <li>Simple CRM systems</li>
-            <li>Sales & records dashboard</li>
+            <li>Debtly-Style Credit Tracking: Automated customer balances and record management</li>
+            <li>Operational Dashboards: Secure, real-time insights into daily business metrics</li>
+            <li>Workflow Automation: Simple CRM systems to manage your growing customer base</li>
           </ul>
 
           <div style="margin-top: 10px;">
-            <strong>Includes:</strong> requirements call, secure login, training & handover, and post-launch support.
+            <strong>Full Handover & Training:</strong> We ensure your team is equipped to scale.
           </div>
         </div>
       </div>
 
       <!-- E-commerce -->
       <div class="project" role="article" aria-label="E-commerce Package">
-        <div class="project-title">E-Commerce & Payments — From KES 120,000</div>
+        <div class="project-title">High-Performance E-Commerce — From KES 120,000</div>
         <div class="project-meta">
-          Full e-commerce solutions for selling products and collecting payments online.
+          Comprehensive online storefronts built to process transactions 24/7
           <br /><br />
           <strong>Includes:</strong>
           <ul style="margin: 10px 0 0; padding-left: 18px;">
             <li>Product/service catalogue</li>
-            <li>M-Pesa integration (where applicable)</li>
+            <li>Seamless Payment Integration: Automated M-Pesa, Visa, and Mastercard checkouts</li>
             <li>Order management</li>
-            <li>Admin dashboard</li>
-            <li>Training on how to run it</li>
+            <li>Intuitive Order Management: Backend dashboard to track inventory and shipping</li>
+            <li>Conversion Rate Optimization (CRO): Strategic design focused on minimizing cart abandonment</li>
           </ul>
         </div>
       </div>
@@ -91,19 +96,39 @@
       <h3>Frequently Asked Questions</h3>
 
       <details>
+        <summary>How is TaifaDevs different from a freelancer?</summary>
+        <p>We don’t just "swap text in a template"
+          . We follow a professional 4-phase process: Consultation, Planning & Analysis, Implementation, and Rigorous
+          Testing
+          . This ensures your project is a strategic asset, not just a line of code.</p>
+      </details>
+
+      <details>
         <summary>Do I pay everything upfront?</summary>
-        <p>No. We split the total project cost into two payments: an initial deposit before work begins, and the
-          remaining balance once the project is completed.</p>
+        <p>Our commitment to partnership means we work in milestones. Typically, we require a commitment deposit to
+          begin the Strategy & Planning phase, with the balance due upon successful Deployment and Launch
+          .</p>
       </details>
 
       <details>
-        <summary>How long does a website take?</summary>
-        <p>Starter sites take 3–7 days. Larger systems take 2–4 weeks depending on complexity.</p>
+        <summary>How long does the process take?</summary>
+        <p>Timelines vary by complexity: Essentials sites typically take 1 week, while custom Brand Growth or E-Commerce
+          solutions range from 2 to 4 weeks
+          . We prioritize a "desired output within the timelines" without sacrificing quality
+          .</p>
       </details>
-
       <details>
-        <summary>Do you offer support after launch?</summary>
-        <p>Yes. All projects include a support period and optional maintenance plans.</p>
+        <summary>Will my site work on all devices?</summary>
+        <p>Absolutely. We employ Mobile-First Development and Cross-Browser Compatibility testing as standard
+          . Your site will be fast, responsive, and optimized for the 62.5% of global traffic coming from mobile devices
+          .</p>
+      </details>
+      <details>
+        <summary>Do you offer support after my site goes live? </summary>
+        <p>We offer "Support you can rely on"
+          . This includes SEO Maintenance and Monitoring, security updates, and performance optimization to ensure your
+          site remains competitive in the ever-changing 2026 search landscape
+          .</p>
       </details>
     </section>
   </section>

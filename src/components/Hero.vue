@@ -2,20 +2,21 @@
   <section class="hero-copy" aria-label="Hero">
     <p class="eyebrow">TaifaDevs • Nairobi, Kenya</p>
 
-    <h1>Helping businesses in Kenya build a stronger online presence.</h1>
+    <h1>The Trusted Partner for Custom Business Systems and High-Converting Websites in Kenya.</h1>
 
     <p class="lead">
-      From simple business websites to custom systems, we build clean, reliable solutions with clear pricing and support
-      you can rely on.
+      We don't just build generic websites; we create mobile-first, high-performance digital assets that drive leads,
+      increase sales, and edge out your competition. Experience reliable support and measurable growth tailored to your
+      unique goals.
     </p>
 
     <div class="cta-row">
       <button class="submit" type="button" @click="handleClick">
-        Let’s build your website
+        Start Your Project
       </button>
 
       <a class="secondary-cta" href="#pricing">
-        View pricing →
+        Explore Our Solutions →
       </a>
     </div>
 
