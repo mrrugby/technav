@@ -1,0 +1,1054 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner page-gutter">
+        <div class="site-header__group">
+          <a class="site-logo" data-path="work" href="#"><span class="brand-wordmark">SNJI</span
+            ></a
+          >
+        </div>
+        <nav class="site-nav">
+          <a
+            aria-current="page"
+            class="site-nav__link"
+            data-path="services"
+            href="#our_services"
+            >Services</a
+          >
+          <a class="site-nav__link" data-path="work" href="#project_samples">Work</a
+          ><a class="site-nav__link" data-path="about" href="#our_story">About</a
+          >
+          <a class="site-nav__link" data-path="pricing" href="#pricing_section">Pricing</a
+          ><a class="site-nav__link" data-path="contact" href="#contact_section">Contact</a
+          >
+        </nav>
+        <div class="site-header__group">
+          <a
+            class="site-header__cta"
+            data-path="contact"
+            href="#contact_section"
+            >Start a project</a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- MOBILE NAV (below 1024px): bottom-right icon pills -->
+    <nav class="mobile-nav" aria-label="Sections">
+      <a
+        class="mobile-nav-link"
+        aria-current="page"
+        aria-label="Services"
+        href="#our_services"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path
+            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+          />
+        </svg>
+        <span class="mobile-nav-label">Services</span>
+      </a>
+      <a class="mobile-nav-link" aria-label="Work" href="#project_samples">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          <rect width="20" height="14" x="2" y="6" rx="2" />
+        </svg>
+        <span class="mobile-nav-label">Work</span>
+      </a>
+      <a class="mobile-nav-link" aria-label="About" href="#our_story">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <span class="mobile-nav-label">About</span>
+      </a>
+      <a class="mobile-nav-link" aria-label="Pricing" href="#pricing_section">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path
+            d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"
+          />
+          <circle cx="7.5" cy="7.5" r=".5" fill="currentColor" />
+        </svg>
+        <span class="mobile-nav-label">Pricing</span>
+      </a>
+      <a class="mobile-nav-link" aria-label="Contact" href="#contact_section">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+        </svg>
+        <span class="mobile-nav-label">Contact</span>
+      </a>
+    </nav>
+    <main class="site-main">
+      <div class="page-sections">
+        <!-- 1. HERO SECTION -->
+        <section class="page-gutter hero">
+          <!-- Subtle architectural background glow and coordinate watermark -->
+          <div class="hero__glow hero__glow--primary"></div>
+          <div class="hero__glow hero__glow--secondary"></div>
+          <div class="section-inner hero__inner">
+            <!-- Meta coordinate ticker bar -->
+
+            <!-- Main Headline + Editorial Asymmetry -->
+            <div class="hero__layout">
+              <div class="hero__main">
+                <div class="hero__tag"></div>
+                <h1 class="hero__title">
+                  Websites worth remembering.
+                </h1>
+              </div>
+              <div class="hero__aside">
+                <p class="lead">
+                  SNJI is an independent web design and development studio
+                  creating thoughtful websites and digital experiences for
+                  businesses, people and ideas.
+                </p>
+                <div class="hero__actions">
+                  <a class="button button--primary" href="#contact_section">
+                    Start a project
+                  </a>
+                  <a class="button button--secondary" href="#project_samples">
+                    <span>View our work</span>
+                    <span class="link-arrow link-arrow--nudge">→</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Architectural Hero Visual Accent: Minimalist Blueprint Display -->
+            <div class="hero__visual">
+              <div class="hero__stats">
+                <div class="hero__stat"></div>
+                <div class="hero__stat"></div>
+
+                <div class="hero__stat"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 4. SERVICES ("WHAT WE BUILD") SECTION -->
+        <section class="page-gutter services" id="our_services">
+          <div class="section-inner">
+            <div class="section-heading section-heading--spaced">
+              <h2 class="section-title">
+                What we build
+              </h2>
+            </div>
+            <!-- Typography-driven minimal 4-grid -->
+            <div class="services__grid">
+              <!-- Service 1 -->
+              <div class="service-card">
+                <div class="service-card__body">
+                  <span class="service-card__number">01</span
+                  >
+                  <h3 class="card-title">
+                    Websites
+                  </h3>
+                  <p class="card-text">
+                    Modern, responsive websites for businesses, professionals
+                    and personal brands. High performance, thoughtful layout,
+                    and strict brand fidelity.
+                  </p>
+                </div>
+                <div class="service-card__footer">
+                  <span class="service-card__tags">Editorial / Corporate</span
+                  >
+                  <span class="service-card__arrow">→</span>
+                </div>
+              </div>
+              <!-- Service 2 -->
+              <div class="service-card">
+                <div class="service-card__body">
+                  <span class="service-card__number">02</span
+                  >
+                  <h3 class="card-title">
+                    Custom Web Applications
+                  </h3>
+                  <p class="card-text">
+                    Purpose-built systems for workflows, records, customer
+                    management and internal operations. Clean backends and
+                    responsive dashboards.
+                  </p>
+                </div>
+                <div class="service-card__footer">
+                  <span class="service-card__tags">Systems &amp; Dashboards</span
+                  >
+                  <span class="service-card__arrow">→</span>
+                </div>
+              </div>
+              <!-- Service 3 -->
+              <div class="service-card">
+                <div class="service-card__body">
+                  <span class="service-card__number">03</span
+                  >
+                  <h3 class="card-title">
+                    E-commerce &amp; Payments
+                  </h3>
+                  <p class="card-text">
+                    Online stores and payment-enabled experiences, including
+                    M-Pesa Daraja integrations and international gateways for
+                    frictionless checkouts.
+                  </p>
+                </div>
+                <div class="service-card__footer">
+                  <span class="service-card__tags">M-Pesa / Stripe / Commerce</span
+                  >
+                  <span class="service-card__arrow">→</span>
+                </div>
+              </div>
+              <!-- Service 4 -->
+              <div class="service-card">
+                <div class="service-card__body">
+                  <span class="service-card__number">04&nbsp;</span
+                  >
+                  <h3 class="card-title">
+                    Website Maintanance
+                  </h3>
+                  <p class="card-text">
+                    Updates, improvements, performance fixes, content changes,
+                    security maintenance, and ongoing technical support to keep
+                    things running properly.
+                  </p>
+                </div>
+                <div class="service-card__footer">
+                  <span class="service-card__tags">Retainers &amp; Audit</span
+                  >
+                  <span class="service-card__arrow">→</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 5. PROCESS SECTION -->
+        <section class="page-gutter process" id="process">
+          <div class="section-inner section-inner--spacious">
+            <div class="process__header">
+              <div class="section-heading">
+                <h2 class="section-title">
+                  From idea to launch.
+                </h2>
+              </div>
+              <p class="section-intro process__intro">
+                A predictable, transparent pathway with continuous updates at
+                every milestone.
+              </p>
+            </div>
+            <!-- 4 sequenced minimalist steps with hairlines -->
+            <div class="process__steps">
+              <!-- Step 1 -->
+              <div class="process-step process-step--discover">
+                <div class="process-step__header">
+                  <span class="process-step__label">01 // DISCOVER</span
+                  >
+                </div>
+                <h3 class="card-title">
+                  Understand
+                </h3>
+                <p class="card-text">
+                  We learn what you need, who it is for, the specific business
+                  constraints, and what the website needs to accomplish.
+                </p>
+                <div class="process-step__outputs">
+                  → Brief • Architecture Plan
+                </div>
+              </div>
+              <!-- Step 2 -->
+              <div class="process-step process-step--visualize">
+                <div class="process-step__header">
+                  <span
+                    class="process-step__label process-step__label--secondary"
+                    >02 // VISUALIZE</span
+                  >
+                </div>
+                <h3 class="card-title">
+                  Design
+                </h3>
+                <p class="card-text">
+                  We turn the requirements into a clear visual direction,
+                  responsive component hierarchy, and intuitive user experience.
+                </p>
+                <div class="process-step__outputs">
+                  → Wireframes • High-Fidelity UI
+                </div>
+              </div>
+              <!-- Step 3 -->
+              <div class="process-step process-step--develop">
+                <div class="process-step__header">
+                  <span class="process-step__label process-step__label--muted">03 // DEVELOP</span
+                  >
+                </div>
+                <h3 class="card-title">
+                  Build
+                </h3>
+                <p class="card-text">
+                  The approved design is developed into a responsive,
+                  accessible, and reliably engineered website with clean clean
+                  code.
+                </p>
+                <div class="process-step__outputs">
+                  → Frontend • Systems • Integrations
+                </div>
+              </div>
+              <!-- Step 4 -->
+              <div class="process-step process-step--deploy">
+                <div class="process-step__header">
+                  <span class="process-step__label">04 // DEPLOY</span
+                  >
+                </div>
+                <h3 class="card-title">
+                  Launch
+                </h3>
+                <p class="card-text">
+                  We test across browsers, audit performance, deploy to
+                  production, and hand over the site, with support available
+                  afterwards.
+                </p>
+                <div class="process-step__outputs">
+                  → Domain Setup • QA • Handover
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 2. SELECTED WORK SECTION -->
+        <section class="page-gutter work" id="project_samples">
+          <div class="section-inner">
+            <!-- Section Header with Filters -->
+            <div class="work__header">
+              <div class="section-heading">
+                <h2 class="section-title">
+                  Selected work
+                </h2>
+                <p class="section-intro">
+                  A collection of websites and digital products&nbsp;
+                </p>
+                <div>built along the way or are ongoing.</div>
+                <p></p>
+              </div>
+              <!-- Filter category tags -->
+              <div class="work__filters" id="work-filters">
+                <button class="filter-btn filter-btn--all" data-filter="all">
+                  All (04)
+                </button>
+                <button class="filter-btn" data-filter="client">
+                  Client Work
+                </button>
+                <button class="filter-btn" data-filter="product">
+                  Products
+                </button>
+                <button class="filter-btn is-active" data-filter="experiment">
+                  Experiments
+                </button>
+              </div>
+            </div>
+            <!-- Showcase Cards Grid -->
+            <div class="work__grid" id="projects-container">
+              <!-- Project 1: Portfolio -->
+              <div
+                class="project-card"
+                data-cat="experiment"
+                style="display: flex"
+              >
+                <div class="project-card__preview">
+                  <div class="project-card__top">
+                    <span class="project-card__category">Portfolio</span
+                    >
+                    <span class="project-card__year">2025</span
+                    >
+                  </div>
+                  <!-- Graphic Mockup Element -->
+                  <div class="project-mock project-mock--loose">
+                    <div class="project-mock__bar">
+                      <div class="project-mock__dots">
+                        <span class="project-mock__dot project-mock__dot--close"></span>
+                        <span
+                          class="project-mock__dot project-mock__dot--minimize"
+                        ></span>
+                        <span class="project-mock__dot project-mock__dot--maximize"></span>
+                      </div>
+                    </div>
+                    <p class="project-mock__quote">
+                      “Hello. I am a conversational CV designed to articulate
+                      career impact dynamically.”
+                    </p>
+                    <div class="project-mock__accent"></div>
+                  </div>
+                  <div class="project-card__bottom">
+                    <span class="project-card__label">PERSONAL PROJECT&nbsp;</span
+                    >
+                  </div>
+                </div>
+                <div class="project-card__body">
+                  <div class="project-card__heading">
+                    <h3 class="project-card__title">
+                      Portfolio
+                    </h3>
+                    <a class="project-card__link" href="#contact">
+                      <span>View case study</span>
+                      <span>↗</span>
+                    </a>
+                  </div>
+                  <p class="project-card__text">
+                    Conversational CV and portfolio project questioning standard
+                    biographical resumes with responsive interaction models and
+                    direct chat-style career exploration.
+                  </p>
+                </div>
+              </div>
+              <!-- Project 2: CouncilCare -->
+              <div class="project-card" data-cat="client" style="display: none">
+                <div class="project-card__preview">
+                  <div class="project-card__top">
+                    <span class="project-card__category">Django &amp; Systems</span
+                    >
+                    <span class="project-card__year">2024</span
+                    >
+                  </div>
+                  <!-- Graphic Mockup Element -->
+                  <div class="project-mock project-mock--loose">
+                    <div class="project-mock__bar">
+                      <span class="project-mock__badge">RESOLVED</span
+                      >
+                    </div>
+                    <div class="project-mock__grid"></div>
+                    <div class="project-mock__progress">
+                      <div class="project-mock__progress-fill"></div>
+                    </div>
+                  </div>
+                  <div class="project-card__bottom">
+                    <span class="project-card__label project-card__label--accent">
+                      <span
+                        style="
+                          color: rgb(144, 144, 154);
+                          letter-spacing: 0.88px;
+                          text-transform: uppercase;
+                          background-color: rgb(15, 29, 36);
+                        "
+                        >Corporate</span
+                      ></span
+                    >
+                  </div>
+                </div>
+                <div class="project-card__body">
+                  <div class="project-card__heading">
+                    <h3 class="project-card__title">
+                      CouncilCare
+                    </h3>
+                    <a class="project-card__link" href="#contact">
+                      <span>View case study</span>
+                      <span>↗</span>
+                    </a>
+                  </div>
+                  <p class="project-card__text">
+                    Django-based IT repair request management system designed to
+                    eliminate email friction and track equipment maintenance
+                    across departmental councils.
+                  </p>
+                </div>
+              </div>
+              <!-- Project 3: Debtly -->
+              <div
+                class="project-card"
+                data-cat="product"
+                style="display: none"
+              >
+                <div class="project-card__preview">
+                  <div class="project-card__top">
+                    <span class="project-card__category">FinTech</span
+                    >
+                    <span class="project-card__year">2023 – 2024</span
+                    >
+                  </div>
+                  <!-- Graphic Mockup Element -->
+                  <div class="project-mock">
+                    <span class="project-mock__caption">Ledger Overview</span
+                    >
+                    <div class="project-mock__figures">
+                      <span class="project-mock__amount">KES 142,500</span
+                      >
+                      <span class="project-mock__delta">−12% pending</span
+                      >
+                    </div>
+                    <div class="project-mock__segments">
+                      <div class="project-mock__segment project-mock__segment--primary"></div>
+                      <div class="project-mock__segment project-mock__segment--secondary"></div>
+                      <div class="project-mock__segment project-mock__segment--muted"></div>
+                    </div>
+                  </div>
+                  <div class="project-card__bottom">
+                    <span class="project-card__label"><span
+                        style="
+                          letter-spacing: 0.88px;
+                          text-transform: uppercase;
+                          background-color: rgb(15, 29, 36);
+                        "
+                        >Corporate</span
+                      ></span
+                    >
+                  </div>
+                </div>
+                <div class="project-card__body">
+                  <div class="project-card__heading">
+                    <h3 class="project-card__title">
+                      Debtly
+                    </h3>
+                    <a class="project-card__link" href="#contact">
+                      <span>View case study</span>
+                      <span>↗</span>
+                    </a>
+                  </div>
+                  <p class="project-card__text">
+                    A lightweight credit tracking system designed for small
+                    Kenyan retail businesses to replace manual notebooks and
+                    make customer balances painless to audit.
+                  </p>
+                </div>
+              </div>
+              <!-- Project 4: MiniPay -->
+              <div
+                class="project-card"
+                data-cat="product"
+                style="display: none"
+              >
+                <div class="project-card__preview">
+                  <div class="project-card__top">
+                    <span class="project-card__category">M-Pesa API</span
+                    >
+                    <span class="project-card__year">2024</span
+                    >
+                  </div>
+                  <!-- Graphic Mockup Element -->
+                  <div class="project-mock">
+                    <div class="project-mock__status-row">
+                      <span class="project-mock__dot project-mock__dot--live"></span>
+                    </div>
+                    <p class="project-mock__log">
+                      &gt; M-Pesa Express Triggered: +254 7** *** 102
+                    </p>
+                    <div class="project-mock__status">
+                      Status: 200 OK • Response Time: 412ms
+                    </div>
+                  </div>
+                  <div class="project-card__bottom">
+                    <span class="project-card__label"><span
+                        style="
+                          letter-spacing: 0.88px;
+                          text-transform: uppercase;
+                          background-color: rgb(15, 29, 36);
+                        "
+                        >Corporate</span
+                      ></span
+                    >
+                  </div>
+                </div>
+                <div class="project-card__body">
+                  <div class="project-card__heading">
+                    <h3 class="project-card__title">
+                      MiniPay
+                    </h3>
+                    <a class="project-card__link" href="#contact">
+                      <span>View case study</span>
+                      <span>↗</span>
+                    </a>
+                  </div>
+                  <p class="project-card__text">
+                    A Django + M-Pesa payment integration framework facilitating
+                    seamless mobile money transactions with zero drop-off,
+                    instant webhooks, and automatic receipting.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 3. STUDIO INTRODUCTION SECTION -->
+        <section class="page-gutter studio" id="our_story">
+          <div class="section-inner section-inner--spacious">
+            <div class="studio__layout">
+              <!-- Large Left Title -->
+              <div class="studio__heading">
+                <h2 class="section-title">
+                  Small studio.<br />Quality work.
+                </h2>
+                <div class="studio__rule"></div>
+              </div>
+              <!-- Right Editorial Column -->
+              <div class="studio__content">
+                <p class="lead lead--bright">
+                  SNJI is an independent web design and development studio
+                  focused on building clear, useful and well-crafted digital
+                  experiences.
+                </p>
+                <p class="studio__text">
+                  From straightforward business websites to custom web
+                  applications, the goal is to make digital products that look
+                  good, work properly and solve real problems.&nbsp;
+                </p>
+                <!-- Studio Metrics Cards -->
+                <div class="studio__metrics">
+                  <div class="studio-metric">
+                    <span class="studio-metric__value">100%</span
+                    >
+                    <span class="studio-metric__label">Independent Ownership</span
+                    >
+                    <p class="studio-metric__text">
+                      Direct dialogue with the developers who build.
+                    </p>
+                  </div>
+                  <div class="studio-metric">
+                    <span class="studio-metric__value">Clean</span
+                    >
+                    <span class="studio-metric__label">Bespoke Architecture</span
+                    >
+                    <p class="studio-metric__text">
+                      Tailored engineering without bloated site builders.
+                    </p>
+                  </div>
+                  <div class="studio-metric">
+                    <span class="studio-metric__value">Global</span
+                    >
+                    <span class="studio-metric__label">East Africa and the&nbsp; World</span
+                    >
+                    <p class="studio-metric__text">
+                      Nairobi-based craft deployed worldwide.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 7. ABOUT / PHILOSOPHY SECTION -->
+
+        <section class="page-gutter about" id="our_story">
+          <div class="about__backdrop">
+            <div class="about__fade"></div>
+          </div>
+          <div class="about__photo">
+            <img
+              src="assets/our-aproach-bg.jpg"
+              alt=""
+              class="about__photo-img"
+            />
+          </div>
+
+          <div class="section-inner section-inner--layered">
+            <div class="about__layout">
+              <div class="about__content">
+                <h2 class="section-title section-title--statement">
+                  Good websites do more than look good.
+                </h2>
+                <p class="lead">
+                  They make information easier to understand, businesses easier
+                  to trust and products easier to use.
+                </p>
+                <p class="about__text"></p>
+                <p>
+                  SNJI Studio focuses on the details that make a website work
+                  well: clear structure, useful content, responsive design,
+                  strong performance, and easy maintenance. We believe a
+                  well-built website should look good because the foundation is
+                  right, not because it has been overloaded with unnecessary
+                  design elements.
+                </p>
+                <p></p>
+              </div>
+              <div class="approach-card">
+                <span class="approach-card__title"><strong data-start="288" data-end="304">Our Approach</strong
+                  ></span
+                >
+                <div class="approach-list">
+                  <div class="approach-list__item">
+                    <span class="approach-list__number">01</span>
+                    <p></p>
+                    <p
+                      dir="auto"
+                      data-start="778"
+                      data-end="912"
+                      class="PDq2pG_selectionAnchorContainer"
+                    >
+                      <strong data-start="1366" data-end="1392">Less, Is better.</strong
+                      ><br data-start="1392" data-end="1395" />
+                      We keep things focused and avoid adding elements that
+                      don't serve a purpose.
+                    </p>
+                    <p dir="auto" data-start="914" data-end="1034"></p>
+                    <p></p>
+                  </div>
+                  <div class="approach-list__item">
+                    <span class="approach-list__number">02</span>
+                    <p>
+                      <strong data-start="914" data-end="937">Speed matters.</strong
+                      ><br data-start="937" data-end="940" />
+                      A good website should load quickly and feel responsive.
+                      Performance is part of the experience.
+                    </p>
+                  </div>
+                  <div class="approach-list__item">
+                    <span class="approach-list__number">03</span>
+                    <p>
+                      <strong data-start="1574" data-end="1597">Simplicity.</strong
+                      ><br data-start="1597" data-end="1600" />
+                      Good typography and structure make information easier to
+                      understand and use.
+                    </p>
+                  </div>
+                  <div class="approach-list__item">
+                    <span class="approach-list__number">04</span>
+                    <p>
+                      <strong data-start="1155" data-end="1192">Straightforward.</strong
+                      ><br data-start="1192" data-end="1195" />
+                      Clear pricing, clear ownership, and clean code. No
+                      unnecessary lock-ins or surprises.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. PRICING SECTION -->
+        <section class="page-gutter pricing" id="pricing_section">
+          <div class="section-inner">
+            <div class="section-heading section-heading--spaced">
+              <h2 class="section-title">
+                Pricing
+              </h2>
+              <p class="section-intro">
+                Straightforward estimates anchored on scope, clarity, and
+                dependable deliverables.
+              </p>
+            </div>
+            <!-- Pricing Matrix Grid -->
+            <div class="pricing__grid">
+              <!-- Tier 1 -->
+              <div class="pricing-card">
+                <div class="pricing-card__header">
+                  <h3 class="card-title">
+                    Starter Website
+                  </h3>
+                  <div class="pricing-card__price">
+                    <span class="pricing-card__from">From</span
+                    >
+                    <span class="pricing-card__amount">KES 25,000</span
+                    >
+                  </div>
+                  <p class="pricing-card__description">
+                    For small businesses and personal brands getting online with
+                    authority and speed.
+                  </p>
+                </div>
+                <div class="pricing-card__features">
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>1 to 3 core pages</span>
+                  </div>
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>Responsive mobile layout</span>
+                  </div>
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>WhatsApp / Lead contact form</span>
+                  </div>
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>Fast 7-10 day turnaround</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Tier 2 -->
+              <div class="pricing-card pricing-card--featured">
+                <div class="pricing-card__badge">
+                  RECOMMENDED
+                </div>
+                <div class="pricing-card__header">
+                  <h3 class="card-title">
+                    Business Website
+                  </h3>
+                  <div class="pricing-card__price">
+                    <span class="pricing-card__from">From</span
+                    >
+                    <span class="pricing-card__amount">KES 40,000</span
+                    >
+                  </div>
+                  <p class="pricing-card__description">
+                    For established businesses that need a stronger, polished
+                    and complete online presence.
+                  </p>
+                </div>
+                <div class="pricing-card__features">
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>Up to 7 tailored sections/pages</span>
+                  </div>
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>Advanced layout &amp; animations</span>
+                  </div>
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>Search engine (SEO) foundation</span>
+                  </div>
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>CMS / Dynamic updates ready</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Tier 3 -->
+              <div class="pricing-card">
+                <div class="pricing-card__header">
+                  <h3 class="card-title">
+                    Custom Web App
+                  </h3>
+                  <div class="pricing-card__price">
+                    <span class="pricing-card__from">From</span
+                    >
+                    <span class="pricing-card__amount">KES 80,000</span
+                    >
+                  </div>
+                  <p class="pricing-card__description">
+                    For custom systems, dashboards, client portals and automated
+                    business workflows.
+                  </p>
+                </div>
+                <div class="pricing-card__features">
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>Database schema &amp; user auth</span>
+                  </div>
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>Role-based access controls</span>
+                  </div>
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>Custom CRUD &amp; reporting logic</span>
+                  </div>
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>API connectivity &amp; webhooks</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Tier 4 -->
+              <div class="pricing-card">
+                <div class="pricing-card__header">
+                  <h3 class="card-title">
+                    E-commerce &amp; Pay
+                  </h3>
+                  <div class="pricing-card__price">
+                    <span class="pricing-card__from">From</span
+                    >
+                    <span class="pricing-card__amount">KES 120,000</span
+                    >
+                  </div>
+                  <p class="pricing-card__description">
+                    For online stores and payment-enabled websites requiring
+                    automated settlement.
+                  </p>
+                </div>
+                <div class="pricing-card__features">
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>M-Pesa STK Push integration</span>
+                  </div>
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>Card / Multi-currency support</span>
+                  </div>
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>Product catalog &amp; inventory track</span>
+                  </div>
+                  <div class="pricing-card__feature">
+                    <span class="pricing-card__bullet">—</span>
+                    <span>Automated order dispatch &amp; SMS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Footnote and CTA -->
+            <div class="pricing__footer">
+              <p class="pricing__note">
+                * Final pricing depends on scope, functionality and project
+                requirements. Hosting and domain costs are separate. Invoices
+                issued with staged milestone releases.
+              </p>
+              <a class="pricing__cta" href="#contact_section">
+                <span>Discuss your project</span>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. CONTACT CTA SECTION -->
+        <section class="page-gutter contact" id="contact_section">
+          <!-- Giant Subtle Watermark Typography -->
+          <div class="contact__watermark">
+            SNJI
+          </div>
+          <div class="section-inner section-inner--layered">
+            <div class="section-heading"></div>
+            <div class="contact__layout">
+              <div class="contact__main">
+                <h2 class="section-title section-title--statement">
+                  Have something<br />worth building?
+                </h2>
+                <p class="contact__lead">
+                  Tell us what you're working on. We'll come back with a
+                  straightforward plan, a realistic timeline, and a clear
+                  estimate.
+                </p>
+              </div>
+              <div class="contact__actions">
+                <a
+                  class="button button--primary"
+                  href="mailto:hello@snji.studio"
+                >
+                  Start a project
+                </a>
+                <a
+                  class="button button--secondary"
+                  href="https://wa.me/254700000000"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <span>WhatsApp (+254 Direct)</span>
+                  <span class="link-arrow">→</span>
+                </a>
+              </div>
+            </div>
+            <!-- Contact Directory Footer Grid -->
+            <div class="contact__details">
+              <div class="contact__detail">
+                <span class="contact__label">inquiries</span
+                >
+                <a class="contact__email" href="mailto:hello@snji.studio">xxxxxxxxx</a
+                >
+              </div>
+              <div class="contact__detail">
+                <span class="contact__label">Studio Location</span
+                >
+                <span class="contact__value">Kilimani • Nairobi, Kenya</span
+                >
+              </div>
+              <div class="contact__detail">
+                <span class="contact__label">Response Time</span
+                >
+                <span class="contact__value">Within 24 Hours • Mon – Fri</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <script src="script.js"></script>
+    </main>
+    <footer class="site-footer">
+      <div class="page-gutter site-footer__main">
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <span class="brand-wordmark">SNJI</span
+            >
+            <p class="site-footer__tagline">
+              Web design &amp; development studio based in Nairobi, Kenya.
+              Architectural restraint paired with computational precision.
+            </p>
+          </div>
+          <div class="site-footer__column">
+            <span class="site-footer__heading">Navigation</span
+            ><a class="site-footer__link" data-path="work" href="#">Work</a
+            ><a class="site-footer__link" data-path="services" href="#">Services</a
+            ><a class="site-footer__link" data-path="about" href="#">About</a
+            ><a class="site-footer__link" data-path="pricing" href="#">Pricing</a
+            >
+          </div>
+          <div class="site-footer__column">
+            <span class="site-footer__heading">Inquiries</span
+            ><a class="site-footer__link" data-path="contact" href="#">Contact</a
+            ><a class="site-footer__link" href="mailto:hello@snji.studio">Email: xxxxxxxx</a
+            ><a
+              class="site-footer__link"
+              href="https://wa.me/254700000000"
+              rel="noopener"
+              target="_blank"
+              >WhatsApp:&nbsp; xxxxxxxx</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="page-gutter site-footer__bar">
+        <p class="site-footer__copyright">
+          Copyright © 2026 SNJI. All rights reserved.
+        </p>
+        <span class="site-footer__city">Nairobi</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
