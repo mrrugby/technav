@@ -19,14 +19,34 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
   </head>
   <body>
     <header class="site-header">
       <div class="site-header__inner page-gutter">
         <div class="site-header__group">
-          <a class="site-logo" data-path="work" href="#"><span class="brand-wordmark">SNJI</span
-            ></a
-          >
+          <a class="site-logo" data-path="work" href="#">
+            <span class="site-logo__image">
+              <img src="assets/snji-logo.png" alt="SNJI" />
+            </span>
+          </a>
         </div>
         <nav class="site-nav">
           <a
@@ -36,11 +56,15 @@
             href="#our_services"
             >Services</a
           >
-          <a class="site-nav__link" data-path="work" href="#project_samples">Work</a
-          ><a class="site-nav__link" data-path="about" href="#our_story">About</a
+          <a class="site-nav__link" data-path="work" href="#project_samples"
+            >Work</a
+          ><a class="site-nav__link" data-path="about" href="#our_story"
+            >About</a
           >
-          <a class="site-nav__link" data-path="pricing" href="#pricing_section">Pricing</a
-          ><a class="site-nav__link" data-path="contact" href="#contact_section">Contact</a
+          <a class="site-nav__link" data-path="pricing" href="#pricing_section"
+            >Pricing</a
+          ><a class="site-nav__link" data-path="contact" href="#contact_section"
+            >Contact</a
           >
         </nav>
         <div class="site-header__group">
@@ -153,9 +177,7 @@
             <div class="hero__layout">
               <div class="hero__main">
                 <div class="hero__tag"></div>
-                <h1 class="hero__title">
-                  Websites worth remembering.
-                </h1>
+                <h1 class="hero__title">Websites worth remembering.</h1>
               </div>
               <div class="hero__aside">
                 <p class="lead">
@@ -169,8 +191,7 @@
                   </a>
                   <a class="button button--secondary" href="#project_samples">
                     <span>View our work</span>
-                    <span class="link-arrow link-arrow--nudge">→</span
-                    >
+                    <span class="link-arrow link-arrow--nudge">→</span>
                   </a>
                 </div>
               </div>
@@ -190,20 +211,15 @@
         <section class="page-gutter services" id="our_services">
           <div class="section-inner">
             <div class="section-heading section-heading--spaced">
-              <h2 class="section-title">
-                What we build
-              </h2>
+              <h2 class="section-title">What we build</h2>
             </div>
             <!-- Typography-driven minimal 4-grid -->
             <div class="services__grid">
               <!-- Service 1 -->
               <div class="service-card">
                 <div class="service-card__body">
-                  <span class="service-card__number">01</span
-                  >
-                  <h3 class="card-title">
-                    Websites
-                  </h3>
+                  <span class="service-card__number">01</span>
+                  <h3 class="card-title">Websites</h3>
                   <p class="card-text">
                     Modern, responsive websites for businesses, professionals
                     and personal brands. High performance, thoughtful layout,
@@ -211,19 +227,15 @@
                   </p>
                 </div>
                 <div class="service-card__footer">
-                  <span class="service-card__tags">Editorial / Corporate</span
-                  >
+                  <span class="service-card__tags">Editorial / Corporate</span>
                   <span class="service-card__arrow">→</span>
                 </div>
               </div>
               <!-- Service 2 -->
               <div class="service-card">
                 <div class="service-card__body">
-                  <span class="service-card__number">02</span
-                  >
-                  <h3 class="card-title">
-                    Custom Web Applications
-                  </h3>
+                  <span class="service-card__number">02</span>
+                  <h3 class="card-title">Custom Web Applications</h3>
                   <p class="card-text">
                     Purpose-built systems for workflows, records, customer
                     management and internal operations. Clean backends and
@@ -231,7 +243,8 @@
                   </p>
                 </div>
                 <div class="service-card__footer">
-                  <span class="service-card__tags">Systems &amp; Dashboards</span
+                  <span class="service-card__tags"
+                    >Systems &amp; Dashboards</span
                   >
                   <span class="service-card__arrow">→</span>
                 </div>
@@ -239,11 +252,8 @@
               <!-- Service 3 -->
               <div class="service-card">
                 <div class="service-card__body">
-                  <span class="service-card__number">03</span
-                  >
-                  <h3 class="card-title">
-                    E-commerce &amp; Payments
-                  </h3>
+                  <span class="service-card__number">03</span>
+                  <h3 class="card-title">E-commerce &amp; Payments</h3>
                   <p class="card-text">
                     Online stores and payment-enabled experiences, including
                     M-Pesa Daraja integrations and international gateways for
@@ -251,7 +261,8 @@
                   </p>
                 </div>
                 <div class="service-card__footer">
-                  <span class="service-card__tags">M-Pesa / Stripe / Commerce</span
+                  <span class="service-card__tags"
+                    >M-Pesa / Stripe / Commerce</span
                   >
                   <span class="service-card__arrow">→</span>
                 </div>
@@ -259,11 +270,8 @@
               <!-- Service 4 -->
               <div class="service-card">
                 <div class="service-card__body">
-                  <span class="service-card__number">04&nbsp;</span
-                  >
-                  <h3 class="card-title">
-                    Website Maintanance
-                  </h3>
+                  <span class="service-card__number">04&nbsp;</span>
+                  <h3 class="card-title">Website Maintanance</h3>
                   <p class="card-text">
                     Updates, improvements, performance fixes, content changes,
                     security maintenance, and ongoing technical support to keep
@@ -271,8 +279,7 @@
                   </p>
                 </div>
                 <div class="service-card__footer">
-                  <span class="service-card__tags">Retainers &amp; Audit</span
-                  >
+                  <span class="service-card__tags">Retainers &amp; Audit</span>
                   <span class="service-card__arrow">→</span>
                 </div>
               </div>
@@ -284,9 +291,7 @@
           <div class="section-inner section-inner--spacious">
             <div class="process__header">
               <div class="section-heading">
-                <h2 class="section-title">
-                  From idea to launch.
-                </h2>
+                <h2 class="section-title">From idea to launch.</h2>
               </div>
               <p class="section-intro process__intro">
                 A predictable, transparent pathway with continuous updates at
@@ -298,12 +303,9 @@
               <!-- Step 1 -->
               <div class="process-step process-step--discover">
                 <div class="process-step__header">
-                  <span class="process-step__label">01 // DISCOVER</span
-                  >
+                  <span class="process-step__label">01 // DISCOVER</span>
                 </div>
-                <h3 class="card-title">
-                  Understand
-                </h3>
+                <h3 class="card-title">Understand</h3>
                 <p class="card-text">
                   We learn what you need, who it is for, the specific business
                   constraints, and what the website needs to accomplish.
@@ -320,9 +322,7 @@
                     >02 // VISUALIZE</span
                   >
                 </div>
-                <h3 class="card-title">
-                  Design
-                </h3>
+                <h3 class="card-title">Design</h3>
                 <p class="card-text">
                   We turn the requirements into a clear visual direction,
                   responsive component hierarchy, and intuitive user experience.
@@ -334,12 +334,11 @@
               <!-- Step 3 -->
               <div class="process-step process-step--develop">
                 <div class="process-step__header">
-                  <span class="process-step__label process-step__label--muted">03 // DEVELOP</span
+                  <span class="process-step__label process-step__label--muted"
+                    >03 // DEVELOP</span
                   >
                 </div>
-                <h3 class="card-title">
-                  Build
-                </h3>
+                <h3 class="card-title">Build</h3>
                 <p class="card-text">
                   The approved design is developed into a responsive,
                   accessible, and reliably engineered website with clean clean
@@ -352,12 +351,9 @@
               <!-- Step 4 -->
               <div class="process-step process-step--deploy">
                 <div class="process-step__header">
-                  <span class="process-step__label">04 // DEPLOY</span
-                  >
+                  <span class="process-step__label">04 // DEPLOY</span>
                 </div>
-                <h3 class="card-title">
-                  Launch
-                </h3>
+                <h3 class="card-title">Launch</h3>
                 <p class="card-text">
                   We test across browsers, audit performance, deploy to
                   production, and hand over the site, with support available
@@ -376,9 +372,7 @@
             <!-- Section Header with Filters -->
             <div class="work__header">
               <div class="section-heading">
-                <h2 class="section-title">
-                  Selected work
-                </h2>
+                <h2 class="section-title">Selected work</h2>
                 <p class="section-intro">
                   A collection of websites and digital products&nbsp;
                 </p>
@@ -387,7 +381,10 @@
               </div>
               <!-- Filter category tags -->
               <div class="work__filters" id="work-filters">
-                <button class="filter-btn filter-btn--all" data-filter="all">
+                <button
+                  class="filter-btn filter-btn--all is-active"
+                  data-filter="all"
+                >
                   All (04)
                 </button>
                 <button class="filter-btn" data-filter="client">
@@ -396,7 +393,7 @@
                 <button class="filter-btn" data-filter="product">
                   Products
                 </button>
-                <button class="filter-btn is-active" data-filter="experiment">
+                <button class="filter-btn" data-filter="experiment">
                   Experiments
                 </button>
               </div>
@@ -411,20 +408,22 @@
               >
                 <div class="project-card__preview">
                   <div class="project-card__top">
-                    <span class="project-card__category">Portfolio</span
-                    >
-                    <span class="project-card__year">2025</span
-                    >
+                    <span class="project-card__category">Portfolio</span>
+                    <span class="project-card__year">2025</span>
                   </div>
                   <!-- Graphic Mockup Element -->
                   <div class="project-mock project-mock--loose">
                     <div class="project-mock__bar">
                       <div class="project-mock__dots">
-                        <span class="project-mock__dot project-mock__dot--close"></span>
+                        <span
+                          class="project-mock__dot project-mock__dot--close"
+                        ></span>
                         <span
                           class="project-mock__dot project-mock__dot--minimize"
                         ></span>
-                        <span class="project-mock__dot project-mock__dot--maximize"></span>
+                        <span
+                          class="project-mock__dot project-mock__dot--maximize"
+                        ></span>
                       </div>
                     </div>
                     <p class="project-mock__quote">
@@ -434,15 +433,14 @@
                     <div class="project-mock__accent"></div>
                   </div>
                   <div class="project-card__bottom">
-                    <span class="project-card__label">PERSONAL PROJECT&nbsp;</span
+                    <span class="project-card__label"
+                      >PERSONAL PROJECT&nbsp;</span
                     >
                   </div>
                 </div>
                 <div class="project-card__body">
                   <div class="project-card__heading">
-                    <h3 class="project-card__title">
-                      Portfolio
-                    </h3>
+                    <h3 class="project-card__title">Portfolio</h3>
                     <a class="project-card__link" href="#contact">
                       <span>View case study</span>
                       <span>↗</span>
@@ -459,16 +457,15 @@
               <div class="project-card" data-cat="client" style="display: none">
                 <div class="project-card__preview">
                   <div class="project-card__top">
-                    <span class="project-card__category">Django &amp; Systems</span
+                    <span class="project-card__category"
+                      >Django &amp; Systems</span
                     >
-                    <span class="project-card__year">2024</span
-                    >
+                    <span class="project-card__year">2024</span>
                   </div>
                   <!-- Graphic Mockup Element -->
                   <div class="project-mock project-mock--loose">
                     <div class="project-mock__bar">
-                      <span class="project-mock__badge">RESOLVED</span
-                      >
+                      <span class="project-mock__badge">RESOLVED</span>
                     </div>
                     <div class="project-mock__grid"></div>
                     <div class="project-mock__progress">
@@ -476,7 +473,9 @@
                     </div>
                   </div>
                   <div class="project-card__bottom">
-                    <span class="project-card__label project-card__label--accent">
+                    <span
+                      class="project-card__label project-card__label--accent"
+                    >
                       <span
                         style="
                           color: rgb(144, 144, 154);
@@ -491,9 +490,7 @@
                 </div>
                 <div class="project-card__body">
                   <div class="project-card__heading">
-                    <h3 class="project-card__title">
-                      CouncilCare
-                    </h3>
+                    <h3 class="project-card__title">CouncilCare</h3>
                     <a class="project-card__link" href="#contact">
                       <span>View case study</span>
                       <span>↗</span>
@@ -514,29 +511,31 @@
               >
                 <div class="project-card__preview">
                   <div class="project-card__top">
-                    <span class="project-card__category">FinTech</span
-                    >
-                    <span class="project-card__year">2023 – 2024</span
-                    >
+                    <span class="project-card__category">FinTech</span>
+                    <span class="project-card__year">2023 – 2024</span>
                   </div>
                   <!-- Graphic Mockup Element -->
                   <div class="project-mock">
-                    <span class="project-mock__caption">Ledger Overview</span
-                    >
+                    <span class="project-mock__caption">Ledger Overview</span>
                     <div class="project-mock__figures">
-                      <span class="project-mock__amount">KES 142,500</span
-                      >
-                      <span class="project-mock__delta">−12% pending</span
-                      >
+                      <span class="project-mock__amount">KES 142,500</span>
+                      <span class="project-mock__delta">−12% pending</span>
                     </div>
                     <div class="project-mock__segments">
-                      <div class="project-mock__segment project-mock__segment--primary"></div>
-                      <div class="project-mock__segment project-mock__segment--secondary"></div>
-                      <div class="project-mock__segment project-mock__segment--muted"></div>
+                      <div
+                        class="project-mock__segment project-mock__segment--primary"
+                      ></div>
+                      <div
+                        class="project-mock__segment project-mock__segment--secondary"
+                      ></div>
+                      <div
+                        class="project-mock__segment project-mock__segment--muted"
+                      ></div>
                     </div>
                   </div>
                   <div class="project-card__bottom">
-                    <span class="project-card__label"><span
+                    <span class="project-card__label"
+                      ><span
                         style="
                           letter-spacing: 0.88px;
                           text-transform: uppercase;
@@ -549,9 +548,7 @@
                 </div>
                 <div class="project-card__body">
                   <div class="project-card__heading">
-                    <h3 class="project-card__title">
-                      Debtly
-                    </h3>
+                    <h3 class="project-card__title">Debtly</h3>
                     <a class="project-card__link" href="#contact">
                       <span>View case study</span>
                       <span>↗</span>
@@ -572,15 +569,15 @@
               >
                 <div class="project-card__preview">
                   <div class="project-card__top">
-                    <span class="project-card__category">M-Pesa API</span
-                    >
-                    <span class="project-card__year">2024</span
-                    >
+                    <span class="project-card__category">M-Pesa API</span>
+                    <span class="project-card__year">2024</span>
                   </div>
                   <!-- Graphic Mockup Element -->
                   <div class="project-mock">
                     <div class="project-mock__status-row">
-                      <span class="project-mock__dot project-mock__dot--live"></span>
+                      <span
+                        class="project-mock__dot project-mock__dot--live"
+                      ></span>
                     </div>
                     <p class="project-mock__log">
                       &gt; M-Pesa Express Triggered: +254 7** *** 102
@@ -590,7 +587,8 @@
                     </div>
                   </div>
                   <div class="project-card__bottom">
-                    <span class="project-card__label"><span
+                    <span class="project-card__label"
+                      ><span
                         style="
                           letter-spacing: 0.88px;
                           text-transform: uppercase;
@@ -603,9 +601,7 @@
                 </div>
                 <div class="project-card__body">
                   <div class="project-card__heading">
-                    <h3 class="project-card__title">
-                      MiniPay
-                    </h3>
+                    <h3 class="project-card__title">MiniPay</h3>
                     <a class="project-card__link" href="#contact">
                       <span>View case study</span>
                       <span>↗</span>
@@ -627,9 +623,7 @@
             <div class="studio__layout">
               <!-- Large Left Title -->
               <div class="studio__heading">
-                <h2 class="section-title">
-                  Small studio.<br />Quality work.
-                </h2>
+                <h2 class="section-title">Small studio.<br />Quality work.</h2>
                 <div class="studio__rule"></div>
               </div>
               <!-- Right Editorial Column -->
@@ -647,27 +641,27 @@
                 <!-- Studio Metrics Cards -->
                 <div class="studio__metrics">
                   <div class="studio-metric">
-                    <span class="studio-metric__value">100%</span
-                    >
-                    <span class="studio-metric__label">Independent Ownership</span
+                    <span class="studio-metric__value">100%</span>
+                    <span class="studio-metric__label"
+                      >Independent Ownership</span
                     >
                     <p class="studio-metric__text">
                       Direct dialogue with the developers who build.
                     </p>
                   </div>
                   <div class="studio-metric">
-                    <span class="studio-metric__value">Clean</span
-                    >
-                    <span class="studio-metric__label">Bespoke Architecture</span
+                    <span class="studio-metric__value">Clean</span>
+                    <span class="studio-metric__label"
+                      >Bespoke Architecture</span
                     >
                     <p class="studio-metric__text">
                       Tailored engineering without bloated site builders.
                     </p>
                   </div>
                   <div class="studio-metric">
-                    <span class="studio-metric__value">Global</span
-                    >
-                    <span class="studio-metric__label">East Africa and the&nbsp; World</span
+                    <span class="studio-metric__value">Global</span>
+                    <span class="studio-metric__label"
+                      >East Africa and the&nbsp; World</span
                     >
                     <p class="studio-metric__text">
                       Nairobi-based craft deployed worldwide.
@@ -714,7 +708,9 @@
                 <p></p>
               </div>
               <div class="approach-card">
-                <span class="approach-card__title"><strong data-start="288" data-end="304">Our Approach</strong
+                <span class="approach-card__title"
+                  ><strong data-start="288" data-end="304"
+                    >Our Approach</strong
                   ></span
                 >
                 <div class="approach-list">
@@ -727,7 +723,8 @@
                       data-end="912"
                       class="PDq2pG_selectionAnchorContainer"
                     >
-                      <strong data-start="1366" data-end="1392">Less, Is better.</strong
+                      <strong data-start="1366" data-end="1392"
+                        >Less, Is better.</strong
                       ><br data-start="1392" data-end="1395" />
                       We keep things focused and avoid adding elements that
                       don't serve a purpose.
@@ -738,7 +735,8 @@
                   <div class="approach-list__item">
                     <span class="approach-list__number">02</span>
                     <p>
-                      <strong data-start="914" data-end="937">Speed matters.</strong
+                      <strong data-start="914" data-end="937"
+                        >Speed matters.</strong
                       ><br data-start="937" data-end="940" />
                       A good website should load quickly and feel responsive.
                       Performance is part of the experience.
@@ -747,7 +745,8 @@
                   <div class="approach-list__item">
                     <span class="approach-list__number">03</span>
                     <p>
-                      <strong data-start="1574" data-end="1597">Simplicity.</strong
+                      <strong data-start="1574" data-end="1597"
+                        >Simplicity.</strong
                       ><br data-start="1597" data-end="1600" />
                       Good typography and structure make information easier to
                       understand and use.
@@ -756,7 +755,8 @@
                   <div class="approach-list__item">
                     <span class="approach-list__number">04</span>
                     <p>
-                      <strong data-start="1155" data-end="1192">Straightforward.</strong
+                      <strong data-start="1155" data-end="1192"
+                        >Straightforward.</strong
                       ><br data-start="1192" data-end="1195" />
                       Clear pricing, clear ownership, and clean code. No
                       unnecessary lock-ins or surprises.
@@ -772,9 +772,7 @@
         <section class="page-gutter pricing" id="pricing_section">
           <div class="section-inner">
             <div class="section-heading section-heading--spaced">
-              <h2 class="section-title">
-                Pricing
-              </h2>
+              <h2 class="section-title">Pricing</h2>
               <p class="section-intro">
                 Straightforward estimates anchored on scope, clarity, and
                 dependable deliverables.
@@ -785,14 +783,10 @@
               <!-- Tier 1 -->
               <div class="pricing-card">
                 <div class="pricing-card__header">
-                  <h3 class="card-title">
-                    Starter Website
-                  </h3>
+                  <h3 class="card-title">Starter Website</h3>
                   <div class="pricing-card__price">
-                    <span class="pricing-card__from">From</span
-                    >
-                    <span class="pricing-card__amount">KES 25,000</span
-                    >
+                    <span class="pricing-card__from">From</span>
+                    <span class="pricing-card__amount">KES 25,000</span>
                   </div>
                   <p class="pricing-card__description">
                     For small businesses and personal brands getting online with
@@ -820,18 +814,12 @@
               </div>
               <!-- Tier 2 -->
               <div class="pricing-card pricing-card--featured">
-                <div class="pricing-card__badge">
-                  RECOMMENDED
-                </div>
+                <div class="pricing-card__badge">RECOMMENDED</div>
                 <div class="pricing-card__header">
-                  <h3 class="card-title">
-                    Business Website
-                  </h3>
+                  <h3 class="card-title">Business Website</h3>
                   <div class="pricing-card__price">
-                    <span class="pricing-card__from">From</span
-                    >
-                    <span class="pricing-card__amount">KES 40,000</span
-                    >
+                    <span class="pricing-card__from">From</span>
+                    <span class="pricing-card__amount">KES 40,000</span>
                   </div>
                   <p class="pricing-card__description">
                     For established businesses that need a stronger, polished
@@ -860,14 +848,10 @@
               <!-- Tier 3 -->
               <div class="pricing-card">
                 <div class="pricing-card__header">
-                  <h3 class="card-title">
-                    Custom Web App
-                  </h3>
+                  <h3 class="card-title">Custom Web App</h3>
                   <div class="pricing-card__price">
-                    <span class="pricing-card__from">From</span
-                    >
-                    <span class="pricing-card__amount">KES 80,000</span
-                    >
+                    <span class="pricing-card__from">From</span>
+                    <span class="pricing-card__amount">KES 80,000</span>
                   </div>
                   <p class="pricing-card__description">
                     For custom systems, dashboards, client portals and automated
@@ -896,14 +880,10 @@
               <!-- Tier 4 -->
               <div class="pricing-card">
                 <div class="pricing-card__header">
-                  <h3 class="card-title">
-                    E-commerce &amp; Pay
-                  </h3>
+                  <h3 class="card-title">E-commerce &amp; Pay</h3>
                   <div class="pricing-card__price">
-                    <span class="pricing-card__from">From</span
-                    >
-                    <span class="pricing-card__amount">KES 120,000</span
-                    >
+                    <span class="pricing-card__from">From</span>
+                    <span class="pricing-card__amount">KES 120,000</span>
                   </div>
                   <p class="pricing-card__description">
                     For online stores and payment-enabled websites requiring
@@ -948,9 +928,7 @@
         <!-- 8. CONTACT CTA SECTION -->
         <section class="page-gutter contact" id="contact_section">
           <!-- Giant Subtle Watermark Typography -->
-          <div class="contact__watermark">
-            SNJI
-          </div>
+          <div class="contact__watermark">SNJI</div>
           <div class="section-inner section-inner--layered">
             <div class="section-heading"></div>
             <div class="contact__layout">
@@ -967,17 +945,17 @@
               <div class="contact__actions">
                 <a
                   class="button button--primary"
-                  href="mailto:hello@snji.studio"
+                  href="mailto:taifa.devs@proton.me"
                 >
                   Start a project
                 </a>
                 <a
                   class="button button--secondary"
-                  href="https://wa.me/254700000000"
+                  href="https://wa.me/254704210555"
                   rel="noopener"
                   target="_blank"
                 >
-                  <span>WhatsApp (+254 Direct)</span>
+                  <span>WhatsApp</span>
                   <span class="link-arrow">→</span>
                 </a>
               </div>
@@ -985,22 +963,18 @@
             <!-- Contact Directory Footer Grid -->
             <div class="contact__details">
               <div class="contact__detail">
-                <span class="contact__label">inquiries</span
-                >
-                <a class="contact__email" href="mailto:hello@snji.studio">xxxxxxxxx</a
-                >
-              </div>
-              <div class="contact__detail">
-                <span class="contact__label">Studio Location</span
-                >
-                <span class="contact__value">Kilimani • Nairobi, Kenya</span
+                <span class="contact__label">inquiries</span>
+                <a class="contact__email" href="mailto:taifa.devs@proton.me"
+                  >taifa.devs@proton.me</a
                 >
               </div>
               <div class="contact__detail">
-                <span class="contact__label">Response Time</span
-                >
-                <span class="contact__value">Within 24 Hours • Mon – Fri</span
-                >
+                <span class="contact__label">Studio Location</span>
+                <span class="contact__value">Kilimani • Nairobi, Kenya</span>
+              </div>
+              <div class="contact__detail">
+                <span class="contact__label">Response Time</span>
+                <span class="contact__value">Within 24 Hours • Mon – Fri</span>
               </div>
             </div>
           </div>
@@ -1013,8 +987,7 @@
       <div class="page-gutter site-footer__main">
         <div class="site-footer__grid">
           <div class="site-footer__brand">
-            <span class="brand-wordmark">SNJI</span
-            >
+            <span class="brand-wordmark">SNJI</span>
             <p class="site-footer__tagline">
               Web design &amp; development studio based in Nairobi, Kenya.
               Architectural restraint paired with computational precision.
@@ -1022,22 +995,35 @@
           </div>
           <div class="site-footer__column">
             <span class="site-footer__heading">Navigation</span
-            ><a class="site-footer__link" data-path="work" href="#">Work</a
-            ><a class="site-footer__link" data-path="services" href="#">Services</a
-            ><a class="site-footer__link" data-path="about" href="#">About</a
-            ><a class="site-footer__link" data-path="pricing" href="#">Pricing</a
+            ><a
+              class="site-footer__link"
+              data-path="work"
+              href="#project_samples"
+              >Work</a
+            ><a
+              class="site-footer__link"
+              data-path="services"
+              href="#our_services"
+              >Services</a
+            ><a class="site-footer__link" data-path="about" href="#our_story"
+              >About</a
+            ><a
+              class="site-footer__link"
+              data-path="pricing"
+              href="#pricing_section"
+              >Pricing</a
             >
           </div>
           <div class="site-footer__column">
             <span class="site-footer__heading">Inquiries</span
-            ><a class="site-footer__link" data-path="contact" href="#">Contact</a
-            ><a class="site-footer__link" href="mailto:hello@snji.studio">Email: xxxxxxxx</a
+            ><a class="site-footer__link" href="mailto:taifa.devs@proton.me"
+              >Email: taifa.devs@proton.me</a
             ><a
               class="site-footer__link"
-              href="https://wa.me/254700000000"
+              href="https://wa.me/254704210555"
               rel="noopener"
               target="_blank"
-              >WhatsApp:&nbsp; xxxxxxxx</a
+              >WhatsApp:&nbsp; +254 704 210 555</a
             >
           </div>
         </div>
@@ -1046,8 +1032,7 @@
         <p class="site-footer__copyright">
           Copyright © 2026 SNJI. All rights reserved.
         </p>
-        <span class="site-footer__city">Nairobi</span
-        >
+        <span class="site-footer__city">Nairobi</span>
       </div>
     </footer>
   </body>

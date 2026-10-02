@@ -78,8 +78,14 @@
 
   /* motion */
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-colors: color 150ms var(--ease-standard), background-color 150ms var(--ease-standard), border-color 150ms var(--ease-standard);
-  --transition-colors-slow: color 200ms var(--ease-standard), background-color 200ms var(--ease-standard), border-color 200ms var(--ease-standard);
+  --transition-colors:
+    color 150ms var(--ease-standard),
+    background-color 150ms var(--ease-standard),
+    border-color 150ms var(--ease-standard);
+  --transition-colors-slow:
+    color 200ms var(--ease-standard),
+    background-color 200ms var(--ease-standard),
+    border-color 200ms var(--ease-standard);
 
   /* type scale: weight size/line-height family, with its letter-spacing */
   --type-display-hero: 400 88px/92px var(--font-display-hero-family);
@@ -212,21 +218,33 @@ ol {
     padding-inline: var(--margin-desktop);
   }
 }
+@media (max-width: 767px) {
+  .site-header__inner {
+    position: relative;
+  }
+
+  .site-header__group:first-child {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 .site-header__group {
   display: flex;
   align-items: center;
   gap: var(--space-md);
 }
 .site-logo {
-  display: flex;
-  align-items: baseline;
-  gap: var(--space-xs);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
 }
-.brand-wordmark {
-  font: var(--type-headline-sm);
-  letter-spacing: -0.025em;
-  text-transform: uppercase;
-  color: var(--color-on-surface);
+
+.site-logo__image {
+  width: 250px;
+  height: auto;
+  display: block;
 }
 .site-nav {
   display: none;
@@ -311,7 +329,9 @@ ol {
   color: var(--color-on-surface-variant);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transition: background-color 200ms ease, color 200ms ease;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
 }
 .mobile-nav-link[aria-current="page"] {
   background-color: var(--color-primary-container);
@@ -332,7 +352,10 @@ ol {
   font-size: 13px;
   line-height: 20px;
   font-weight: 500;
-  transition: max-width 200ms ease, margin-left 200ms ease, opacity 200ms ease;
+  transition:
+    max-width 200ms ease,
+    margin-left 200ms ease,
+    opacity 200ms ease;
 }
 .mobile-nav-link[aria-current="page"] .mobile-nav-label {
   max-width: 6rem;
@@ -1077,7 +1100,7 @@ ol {
 }
 @media (min-width: 1024px) {
   .studio__content,
-.about__content {
+  .about__content {
     grid-column: span 7 / span 7;
   }
 }

@@ -2,20 +2,31 @@
   const filterBtns = document.querySelectorAll(".filter-btn");
   const projectItems = document.querySelectorAll(".project-card");
 
+  function applyFilter(filter) {
+    projectItems.forEach((item) => {
+      if (filter === "all" || item.getAttribute("data-cat") === filter) {
+        item.style.display = "flex";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  }
+
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       filterBtns.forEach((b) => b.classList.toggle("is-active", b === btn));
 
       const filter = btn.getAttribute("data-filter");
-      projectItems.forEach((item) => {
-        if (filter === "all" || item.getAttribute("data-cat") === filter) {
-          item.style.display = "flex";
-        } else {
-          item.style.display = "none";
-        }
-      });
+      applyFilter(filter);
     });
   });
+
+  // Apply the active filter when the page first loads
+  const activeBtn = document.querySelector(".filter-btn.is-active");
+
+  if (activeBtn) {
+    applyFilter(activeBtn.getAttribute("data-filter"));
+  }
 })();
 
 (function () {
