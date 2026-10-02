@@ -68,12 +68,9 @@
           >
         </nav>
         <div class="site-header__group">
-          <a
-            class="site-header__cta"
-            data-path="contact"
-            href="#contact_section"
-            >Start a project</a
-          >
+          <button class="site-header__cta" type="button" data-open-project>
+            Start a project
+          </button>
         </div>
       </div>
     </header>
@@ -186,9 +183,9 @@
                   businesses, people and ideas.
                 </p>
                 <div class="hero__actions">
-                  <a class="button button--primary" href="#contact_section">
+                  <button class="button button--primary" type="button" data-open-project>
                     Start a project
-                  </a>
+                  </button>
                   <a class="button button--secondary" href="#project_samples">
                     <span>View our work</span>
                     <span class="link-arrow link-arrow--nudge">→</span>
@@ -705,7 +702,18 @@
                   right, not because it has been overloaded with unnecessary
                   design elements.
                 </p>
-                <p></p>
+                <article class="founder-card" aria-labelledby="founder-name">
+                  <div class="founder-card__portrait" role="img" aria-label="Founder portrait placeholder">
+                    <span>Portrait coming soon</span>
+                  </div>
+                  <div class="founder-card__content">
+                    <span class="approach-card__title">Meet the person behind SNJI</span>
+                    <h3 class="founder-card__name" id="founder-name">Founder name</h3>
+                    <p class="founder-card__role">Founder &amp; Developer</p>
+                    <p class="founder-card__text">A small, hands-on studio. You’ll work directly with the person building your project.</p>
+                    <a class="founder-card__link" href="#contact_section">Say hello <span aria-hidden="true">→</span></a>
+                  </div>
+                </article>
               </div>
               <div class="approach-card">
                 <span class="approach-card__title"
@@ -943,12 +951,9 @@
                 </p>
               </div>
               <div class="contact__actions">
-                <a
-                  class="button button--primary"
-                  href="mailto:taifa.devs@proton.me"
-                >
+                <button class="button button--primary" type="button" data-open-project>
                   Start a project
-                </a>
+                </button>
                 <a
                   class="button button--secondary"
                   href="https://wa.me/254704210555"
@@ -969,6 +974,10 @@
                 >
               </div>
               <div class="contact__detail">
+                <span class="contact__label">Phone</span>
+                <a class="contact__email" href="tel:+254704210555">+254 704 210 555</a>
+              </div>
+              <div class="contact__detail">
                 <span class="contact__label">Studio Location</span>
                 <span class="contact__value">Kilimani • Nairobi, Kenya</span>
               </div>
@@ -980,6 +989,66 @@
           </div>
         </section>
       </div>
+
+      <dialog class="project-dialog" aria-labelledby="project-dialog-label">
+        <div class="project-dialog__inner">
+          <button class="project-dialog__close" type="button" aria-label="Close project enquiry" data-close-project>×</button>
+          <div class="project-dialog__topline">
+            <span class="approach-card__title" id="project-dialog-label">A project enquiry</span>
+            <span class="project-dialog__step" aria-live="polite"></span>
+          </div>
+          <div class="project-dialog__progress" aria-hidden="true"><span></span></div>
+          <form class="project-form" novalidate>
+            <section class="project-step" data-step="0">
+              <h2 class="section-title" id="project-dialog-title">What are we looking to build?</h2>
+              <div class="project-options" role="group" aria-label="Project type">
+                <button type="button" class="project-option" data-choice="business website">Business website</button>
+                <button type="button" class="project-option" data-choice="e-commerce website">E-commerce website</button>
+                <button type="button" class="project-option" data-choice="web application">Web application</button>
+                <button type="button" class="project-option" data-choice="website redesign">Website redesign</button>
+                <button type="button" class="project-option" data-choice="not sure yet">Not sure yet</button>
+              </div>
+            </section>
+            <section class="project-step" data-step="1" hidden>
+              <h2 class="section-title">What do you need?</h2>
+              <div class="project-options project-options--multi" role="group" aria-label="Project needs">
+                <button type="button" class="project-option" data-choice="new website">New website</button>
+                <button type="button" class="project-option" data-choice="website redesign">Website redesign</button>
+                <button type="button" class="project-option" data-choice="online payments">Online payments</button>
+                <button type="button" class="project-option" data-choice="booking / reservations">Booking / reservations</button>
+                <button type="button" class="project-option" data-choice="custom functionality">Custom functionality</button>
+                <button type="button" class="project-option" data-choice="something else">Something else</button>
+                <button type="button" class="project-option" data-choice="not sure">I’m not sure</button>
+              </div>
+            </section>
+            <section class="project-step" data-step="2" hidden>
+              <h2 class="section-title">What's your approximate budget?</h2>
+              <p class="project-step__note">Just a guide to help us understand the scope.</p>
+              <div class="project-options" role="group" aria-label="Approximate budget">
+                <button type="button" class="project-option" data-choice="Under KES 25k">Under KES 25k</button>
+                <button type="button" class="project-option" data-choice="KES 25k – 50k">KES 25k – 50k</button>
+                <button type="button" class="project-option" data-choice="KES 50k – 100k">KES 50k – 100k</button>
+                <button type="button" class="project-option" data-choice="KES 100k+">KES 100k+</button>
+                <button type="button" class="project-option" data-choice="Not sure yet">Not sure yet</button>
+              </div>
+            </section>
+            <section class="project-step" data-step="3" hidden>
+              <h2 class="section-title">Tell us a little about it.</h2>
+              <label class="project-field"><span>A few details</span><textarea name="details" rows="3" placeholder="What are you hoping to build?"></textarea></label>
+              <div class="project-fields">
+                <label class="project-field"><span>Name</span><input name="name" autocomplete="name" required /></label>
+                <label class="project-field"><span>Email or WhatsApp / contact number</span><input name="contact" autocomplete="email" required /></label>
+              </div>
+            </section>
+            <p class="project-form__error" role="alert" hidden></p>
+            <div class="project-dialog__footer">
+              <button class="project-dialog__back" type="button" data-project-back hidden>← Back</button>
+              <button class="button button--primary project-dialog__next" type="button" data-project-next>Next →</button>
+            </div>
+            <p class="project-form__status" role="status" hidden></p>
+          </form>
+        </div>
+      </dialog>
 
       <script src="script.js"></script>
     </main>
