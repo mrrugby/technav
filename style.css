@@ -144,6 +144,10 @@ body ::selection {
   background-color: var(--color-primary-container);
   color: var(--color-on-primary-container);
 }
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
 main > :first-child {
   margin-top: 0 !important;
 }
