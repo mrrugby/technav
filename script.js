@@ -272,3 +272,17 @@
     }
   });
 })();
+
+(function () {
+  const dialog = document.querySelector(".founder-dialog");
+  const openButton = document.querySelector("[data-open-founder]");
+  if (!dialog || !openButton) return;
+
+  openButton.addEventListener("click", () => dialog.showModal());
+  dialog.querySelector("[data-close-founder]").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", () => openButton.focus());
+  dialog.querySelector("[data-founder-contact]").addEventListener("click", () => dialog.close());
+})();

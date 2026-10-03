@@ -702,18 +702,10 @@
                   right, not because it has been overloaded with unnecessary
                   design elements.
                 </p>
-                <article class="founder-card" aria-labelledby="founder-name">
-                  <div class="founder-card__portrait" role="img" aria-label="Founder portrait placeholder">
-                    <span>Portrait coming soon</span>
-                  </div>
-                  <div class="founder-card__content">
-                    <span class="approach-card__title">Meet the person behind SNJI</span>
-                    <h3 class="founder-card__name" id="founder-name">Founder name</h3>
-                    <p class="founder-card__role">Founder &amp; Developer</p>
-                    <p class="founder-card__text">A small, hands-on studio. You’ll work directly with the person building your project.</p>
-                    <a class="founder-card__link" href="#contact_section">Say hello <span aria-hidden="true">→</span></a>
-                  </div>
-                </article>
+                <button class="founder-trigger" type="button" data-open-founder aria-haspopup="dialog">
+                  <span>Meet the person behind SNJI</span>
+                  <span aria-hidden="true">→</span>
+                </button>
               </div>
               <div class="approach-card">
                 <span class="approach-card__title"
@@ -1047,6 +1039,26 @@
             </div>
             <p class="project-form__status" role="status" hidden></p>
           </form>
+        </div>
+      </dialog>
+
+      <dialog class="project-dialog founder-dialog" aria-labelledby="founder-dialog-label">
+        <div class="project-dialog__inner">
+          <button class="project-dialog__close" type="button" aria-label="Close founder introduction" data-close-founder>×</button>
+          <div class="project-dialog__topline">
+            <span class="approach-card__title" id="founder-dialog-label">Meet the person behind SNJI</span>
+          </div>
+          <div class="founder-dialog__layout">
+            <div class="founder-card__portrait" role="img" aria-label="Founder portrait placeholder">
+              <span>Portrait coming soon</span>
+            </div>
+            <div class="founder-dialog__content">
+              <h2 class="founder-dialog__name">Founder name</h2>
+              <p class="founder-dialog__role">Founder &amp; Developer</p>
+              <p class="founder-dialog__story">SNJI began with a simple belief: the web should make good ideas easier to understand and trust. Today, it’s a small, hands-on studio creating thoughtful digital experiences, with each project built directly by its founder.</p>
+              <a class="button button--primary founder-dialog__hello" href="#contact_section" data-founder-contact>Say hello <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
         </div>
       </dialog>
 
