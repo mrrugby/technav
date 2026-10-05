@@ -1,32 +1,125 @@
 (function () {
-  const filterBtns = document.querySelectorAll(".filter-btn");
-  const projectItems = document.querySelectorAll(".project-card");
+  const projects = [
+    {
+      title: "Portfolio",
+      category: "experiment",
+      type: "Portfolio",
+      year: "2025",
+      label: "Personal Project",
+      description: "Conversational CV and portfolio project questioning standard biographical resumes with responsive interaction models and direct chat-style career exploration.",
+      link: "#contact",
+      mockup: "portfolio",
+    },
+    {
+      title: "CouncilCare",
+      category: "client",
+      type: "Django & Systems",
+      year: "2024",
+      label: "Corporate",
+      description: "Django-based IT repair request management system designed to eliminate email friction and track equipment maintenance across departmental councils.",
+      link: "#contact",
+      mockup: "resolved",
+    },
+    {
+      title: "Debtly",
+      category: "product",
+      type: "FinTech",
+      year: "2023 – 2024",
+      label: "Corporate",
+      description: "A lightweight credit tracking system designed for small Kenyan retail businesses to replace manual notebooks and make customer balances painless to audit.",
+      link: "#contact",
+      mockup: "ledger",
+    },
+    {
+      title: "MiniPay",
+      category: "product",
+      type: "M-Pesa API",
+      year: "2024",
+      label: "Corporate",
+      description: "A Django + M-Pesa payment integration framework facilitating seamless mobile money transactions with zero drop-off, instant webhooks, and automatic receipting.",
+      link: "#contact",
+      mockup: "payment",
+    },
+  ];
 
-  function applyFilter(filter) {
-    projectItems.forEach((item) => {
-      if (filter === "all" || item.getAttribute("data-cat") === filter) {
-        item.style.display = "flex";
-      } else {
-        item.style.display = "none";
-      }
+  const container = document.querySelector("#projects-container");
+  const filters = document.querySelector("#work-filters");
+  if (!container || !filters) return;
+
+  const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  })[char]);
+
+  function renderMockup(type) {
+    const mockups = {
+      portfolio: `<div class="project-mock project-mock--loose">
+        <div class="project-mock__bar"><div class="project-mock__dots">
+          <span class="project-mock__dot project-mock__dot--close"></span><span class="project-mock__dot project-mock__dot--minimize"></span><span class="project-mock__dot project-mock__dot--maximize"></span>
+        </div></div>
+        <p class="project-mock__quote">“Hello. I am a conversational CV designed to articulate career impact dynamically.”</p><div class="project-mock__accent"></div>
+      </div>`,
+      resolved: `<div class="project-mock project-mock--loose">
+        <div class="project-mock__bar"><span class="project-mock__badge">RESOLVED</span></div><div class="project-mock__grid"></div>
+        <div class="project-mock__progress"><div class="project-mock__progress-fill"></div></div>
+      </div>`,
+      ledger: `<div class="project-mock">
+        <span class="project-mock__caption">Ledger Overview</span>
+        <div class="project-mock__figures"><span class="project-mock__amount">KES 142,500</span><span class="project-mock__delta">−12% pending</span></div>
+        <div class="project-mock__segments"><div class="project-mock__segment project-mock__segment--primary"></div><div class="project-mock__segment project-mock__segment--secondary"></div><div class="project-mock__segment project-mock__segment--muted"></div></div>
+      </div>`,
+      payment: `<div class="project-mock">
+        <div class="project-mock__status-row"><span class="project-mock__dot project-mock__dot--live"></span></div>
+        <p class="project-mock__log">&gt; M-Pesa Express Triggered: +254 7** *** 102</p><div class="project-mock__status">Status: 200 OK • Response Time: 412ms</div>
+      </div>`,
+    };
+    return mockups[type] || "";
+  }
+
+  function renderProjectCard(project) {
+    const title = escapeHTML(project.title || "Untitled project");
+    const label = project.label ? `<span class="project-card__label${project.label.toLowerCase() === "corporate" ? " project-card__label--accent project-card__label--corporate" : ""}">${escapeHTML(project.label)}</span>` : "";
+    const link = project.link || "#contact";
+    return `<article class="project-card" data-cat="${escapeHTML(project.category || "")}">
+      <div class="project-card__preview">
+        <div class="project-card__top"><span class="project-card__category">${escapeHTML(project.type || "Project")}</span><span class="project-card__year">${escapeHTML(project.year || "")}</span></div>
+        ${renderMockup(project.mockup)}
+        <div class="project-card__bottom">${label}</div>
+      </div>
+      <div class="project-card__body"><div class="project-card__heading">
+        <h3 class="project-card__title">${title}</h3>
+        <a class="project-card__link" href="${escapeHTML(link)}"><span>View case study</span><span>↗</span></a>
+      </div><p class="project-card__text">${escapeHTML(project.description || "Project details coming soon.")}</p></div>
+    </article>`;
+  }
+
+  function updateProjectCount() {
+    const count = filters.querySelector("[data-project-count]");
+    if (count) count.textContent = String(projects.length).padStart(2, "0");
+  }
+
+  function renderProjects() {
+    container.innerHTML = projects.map(renderProjectCard).join("");
+    updateProjectCount();
+  }
+
+  function setupFilters() {
+    filters.addEventListener("click", (event) => {
+      const button = event.target.closest(".filter-btn");
+      if (!button || !filters.contains(button)) return;
+      filters.querySelectorAll(".filter-btn").forEach((item) => {
+        const active = item === button;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+      const category = button.dataset.filter;
+      container.querySelectorAll(".project-card").forEach((card) => {
+        card.classList.toggle("is-hidden", category !== "all" && card.dataset.cat !== category);
+      });
     });
   }
 
-  filterBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      filterBtns.forEach((b) => b.classList.toggle("is-active", b === btn));
-
-      const filter = btn.getAttribute("data-filter");
-      applyFilter(filter);
-    });
-  });
-
-  // Apply the active filter when the page first loads
-  const activeBtn = document.querySelector(".filter-btn.is-active");
-
-  if (activeBtn) {
-    applyFilter(activeBtn.getAttribute("data-filter"));
-  }
+  renderProjects();
+  setupFilters();
 })();
 
 (function () {
